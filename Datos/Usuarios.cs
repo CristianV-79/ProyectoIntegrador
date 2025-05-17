@@ -33,9 +33,17 @@ namespace ProyectoIntegrador.Datos
                 tabla.Load(resultado);
                 return tabla;
             }
+            catch (MySqlException ex)
+            {
+                // Error de conexión a la base de datos
+                MessageBox.Show($"Error en la conexión con la base de datos: {ex.Message}");
+                return null;
+            }
             catch (Exception ex)
             {
-                throw;
+                // Cualquier otro error
+                MessageBox.Show($"Ocurrió un error: {ex.Message}");
+                return null;
             }
             finally
             {

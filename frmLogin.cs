@@ -54,6 +54,13 @@ namespace ProyectoIntegrador
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            //Mensaje de error si los campos no se completaron correctamente
+            if (txtUsuario.Text == "USUARIO" || txtContraseña.Text == "CONTRASEÑA")
+            {
+                MessageBox.Show("Por favor, complete con su usuario y contraseña.");
+                return;
+            }
+
             DataTable tablaLogin = new DataTable(); // es la que recibe los datos desde el formulario
             Datos.Usuarios dato = new Datos.Usuarios(); // variable que contiene todas las caracteristicas de la clase
             tablaLogin = dato.Log_Usu(txtUsuario.Text, txtContraseña.Text);
