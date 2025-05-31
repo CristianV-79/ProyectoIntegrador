@@ -100,7 +100,7 @@ namespace ProyectoIntegrador
                         txtNombre.Clear();
                         txtApellido.Clear();
                         txtDni.Clear();
-                        txtFeNac.Clear();
+                        txtFeNac.Text = "DD/MM/AAAA";
                         txtEmail.Clear();
                         txtTel.Clear();
                         txtDir.Clear();

@@ -6,16 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProyectoIntegrador.Entidades
 {
-    internal class E_Socio
+    internal class E_Socio : E_Persona
     {
         public int CodSoc { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public int Dni { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public string Email { get; set; }
-        public string? Telefono { get; set; }
-        public string? Direccion { get; set; }
         public DateTime FechaAlta { get; set; }
         public bool Activo { get; set; } // true = activo, false = inactivo
     }
