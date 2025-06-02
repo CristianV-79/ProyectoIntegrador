@@ -44,7 +44,7 @@ namespace ProyectoIntegrador
         }
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            frmPagar frmPagar = new frmPagar();
+            frmPagar frmPagar = new frmPagar(usuario,rol);
             this.Hide();
             frmPagar.Show();
         }

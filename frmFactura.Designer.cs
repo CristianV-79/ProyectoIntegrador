@@ -33,16 +33,16 @@
             label1 = new Label();
             panel2 = new Panel();
             panel3 = new Panel();
-            lblDia = new Label();
+            lblFechaHoy = new Label();
             label3 = new Label();
             btnImprimir = new Button();
             lblSolicitante = new Label();
             lblFecha = new Label();
             label2 = new Label();
             lblPago = new Label();
-            lblFPago = new Label();
-            lblMonto = new Label();
-            lblValor = new Label();
+            lblForma = new Label();
+            lblImp = new Label();
+            lblImporte = new Label();
             label4 = new Label();
             lblClase = new Label();
             panel1.SuspendLayout();
@@ -76,21 +76,21 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(lblDia);
+            panel3.Controls.Add(lblFechaHoy);
             panel3.Controls.Add(label3);
             panel3.Location = new Point(397, 94);
             panel3.Name = "panel3";
             panel3.Size = new Size(391, 179);
             panel3.TabIndex = 2;
             // 
-            // lblDia
+            // lblFechaHoy
             // 
-            lblDia.AutoSize = true;
-            lblDia.Location = new Point(78, 25);
-            lblDia.Name = "lblDia";
-            lblDia.Size = new Size(50, 20);
-            lblDia.TabIndex = 12;
-            lblDia.Text = "label4";
+            lblFechaHoy.AutoSize = true;
+            lblFechaHoy.Location = new Point(78, 25);
+            lblFechaHoy.Name = "lblFechaHoy";
+            lblFechaHoy.Size = new Size(50, 20);
+            lblFechaHoy.TabIndex = 12;
+            lblFechaHoy.Text = "label4";
             // 
             // label3
             // 
@@ -146,32 +146,32 @@
             lblPago.TabIndex = 7;
             lblPago.Text = "Forma de pago:";
             // 
-            // lblFPago
+            // lblForma
             // 
-            lblFPago.AutoSize = true;
-            lblFPago.Location = new Point(171, 386);
-            lblFPago.Name = "lblFPago";
-            lblFPago.Size = new Size(50, 20);
-            lblFPago.TabIndex = 8;
-            lblFPago.Text = "label3";
+            lblForma.AutoSize = true;
+            lblForma.Location = new Point(171, 386);
+            lblForma.Name = "lblForma";
+            lblForma.Size = new Size(50, 20);
+            lblForma.TabIndex = 8;
+            lblForma.Text = "label3";
             // 
-            // lblMonto
+            // lblImp
             // 
-            lblMonto.AutoSize = true;
-            lblMonto.Location = new Point(397, 386);
-            lblMonto.Name = "lblMonto";
-            lblMonto.Size = new Size(72, 20);
-            lblMonto.TabIndex = 9;
-            lblMonto.Text = "Monto:  $";
+            lblImp.AutoSize = true;
+            lblImp.Location = new Point(397, 386);
+            lblImp.Name = "lblImp";
+            lblImp.Size = new Size(56, 20);
+            lblImp.TabIndex = 9;
+            lblImp.Text = "Monto:";
             // 
-            // lblValor
+            // lblImporte
             // 
-            lblValor.AutoSize = true;
-            lblValor.Location = new Point(475, 386);
-            lblValor.Name = "lblValor";
-            lblValor.Size = new Size(50, 20);
-            lblValor.TabIndex = 10;
-            lblValor.Text = "label3";
+            lblImporte.AutoSize = true;
+            lblImporte.Location = new Point(459, 386);
+            lblImporte.Name = "lblImporte";
+            lblImporte.Size = new Size(50, 20);
+            lblImporte.TabIndex = 10;
+            lblImporte.Text = "label3";
             // 
             // label4
             // 
@@ -198,9 +198,9 @@
             ClientSize = new Size(800, 473);
             Controls.Add(lblClase);
             Controls.Add(label4);
-            Controls.Add(lblValor);
-            Controls.Add(lblMonto);
-            Controls.Add(lblFPago);
+            Controls.Add(lblImporte);
+            Controls.Add(lblImp);
+            Controls.Add(lblForma);
             Controls.Add(lblPago);
             Controls.Add(label2);
             Controls.Add(lblFecha);
@@ -230,10 +230,10 @@
         private Label lblFecha;
         private Label label2;
         private Label lblPago;
-        private Label lblFPago;
-        private Label lblMonto;
-        private Label lblValor;
-        private Label lblDia;
+        private Label lblForma;
+        private Label lblImp;
+        private Label lblImporte;
+        private Label lblFechaHoy;
         private Label label3;
         private Label label4;
         private Label lblClase;

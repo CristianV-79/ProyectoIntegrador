@@ -1,6 +1,6 @@
-drop database if exists Proyecto;
-create database Proyecto;
-use Proyecto;
+/*drop database if exists proyecto;*/
+/*create database proyecto;*/
+use proyecto;
 
 create table roles(
 RolUsu int,
@@ -38,6 +38,110 @@ FechaAlta date not null,
 Activo boolean default true not null,
 constraint pk_usuario primary key (CodSoc)
 );
+
+create table profesor(
+IdProfesor int auto_increment primary key,
+Nombre varchar (30) not null,
+TipoDocumento varchar(20) not null,
+Dni int not null,
+SueldoMensual double
+);
+
+insert into profesor (Nombre, TipoDocumento, Dni, SueldoMensual) values
+('Carlos Gómez', 'DNI', 34567890, 235000.00),
+('María Pereyra', 'DNI', 29876543, 420000.00),
+('Luis Adaro', 'Pasaporte', 12345678, 730000.00),
+('Ana Roman', 'DNI', 27654321, 540000.00),
+('Jorge Ramírez', 'Cédula', 45678901, 370000.00);
+
+create table clase(
+IdClase int auto_increment primary key,
+IdProfesor INT,
+Nombre varchar (30) not null,
+Horario time not null,
+Precio double,
+CupoMaximo int,
+HayDisponibilidad boolean,
+foreign key (IdProfesor) references profesor(IdProfesor)
+);
+
+INSERT INTO clase (IdProfesor, Nombre, Horario, Precio, CupoMaximo, HayDisponibilidad) VALUES
+(2,'Spinning','08:00:00', 1500.00, 20, TRUE),
+(2,'Zumba','09:00:00', 1200.00, 25, TRUE),
+(4,'Yoga','11:00:00', 1300.00, 15, TRUE),
+(1,'Crossfit','17:00:00', 1800.00, 12, TRUE),
+(1,'Funcional','18:00:00', 1600.00, 18, TRUE),
+(4,'Pilates','07:00:00', 1400.00, 10, FALSE),
+(5,'HIIT','19:00:00', 1650.00, 16, FALSE),
+(4,'Stretching','13:00:00', 1100.00, 10, TRUE);
+
+create table Profesor_Clase (
+    IdProfesor int not null,
+    IdClase int not null,
+    primary key (IdProfesor, IdClase),
+    foreign key (IdProfesor) references profesor(IdProfesor),
+    foreign key (IdClase) references clase(IdClase)
+);
+
+create table AsistenciaProfesor (
+    IdAsistencia int auto_increment primary key,
+    IdProfesor int not null,
+    Fecha date not null,
+    foreign key (IdProfesor) references profesor(IdProfesor)
+);
+
+create table cuota (
+     IdCuota int auto_increment primary key,
+     Descricion varchar (70) not null,
+     Monto double,
+     FechaVencimiento datetime,
+     CodSoc int not null,
+     foreign key (CodSoc) references socio(CodSoc)
+);
+
+create table solicitante(
+NSolic int primary key,
+nombreS varchar(30) not null,
+apellidoS varchar(30) not null);
+
+create table nosocio(
+CodNoSoc int auto_increment primary key,
+Nombre varchar (30) not null,
+Apellido varchar (30) not null,
+Telefono varchar (20),
+Email varchar (20),
+NSolic int,
+foreign key (NSolic) references solicitante (NSolic)
+);
+
+/* insert dato de solicitante */
+insert into solicitante (NSolic,nombreS, apellidoS) values (1,'Romina', 'Galman');
+alter table nosocio
+modify column Email varchar(50);
+insert into nosocio(Nombre, Apellido, Telefono, Email, NSolic) values ('Romina', 'Galman', 3517448216, 'gal_romi37@hotmail.com',1);
+insert into edicion (IdEdicion, IdClase, fecha) values (1,2, '2025-06-10');
+insert into inscripcion (IdInscri,IdEdicion, CodNoSoc) values (1,1,1);
+
+create table edicion (
+    IdEdicion int primary key,
+    IdClase int,
+    fecha date,
+    foreign key (IdClase) references clase(IdClase)
+);
+
+CREATE TABLE inscripcion (
+    IdInscri int primary key,
+    IdEdicion int,
+    CodNoSoc int,
+    foreign key (IdEdicion) references edicion(IdEdicion),
+    foreign key (CodNoSoc) references nosocio(CodNoSoc)
+);
+
+
+/*create table inscripcion(
+IdInscripcion int auto_increment,
+FechaInscripcion date not null
+);*/
 
 
 /* CREACION DEL PROCEDIMIENTO IngresoLogin */

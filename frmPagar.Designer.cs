@@ -92,7 +92,7 @@
             btnComprobante.TabIndex = 5;
             btnComprobante.Text = "COMPROBANTE";
             btnComprobante.UseVisualStyleBackColor = true;
-            btnComprobante.Click += btnComprobante_Click;
+            
             // 
             // optEfvo
             // 

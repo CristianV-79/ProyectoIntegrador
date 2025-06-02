@@ -15,21 +15,33 @@ namespace ProyectoIntegrador
     {
         private string usuario;
         private string rol;
-        public frmFactura()
+
+        public string solicitante_f;
+        public string clase_f;
+        public DateTime fecha_f;
+        public float monto_f;
+        public string forma_f;
+
+        public frmFactura(string solicitante, string clase, DateTime fecha, float monto, string forma, string usuario, string rol)
         {
             InitializeComponent();
+            solicitante_f = solicitante;
+            clase_f = clase;
+            fecha_f = fecha;
+            monto_f = monto;
+            forma_f = forma;
             this.usuario = usuario;
             this.rol = rol;
 
+            // Aquí podés mostrar los datos en los controles del formulario, por ejemplo:
+            lblSolicitante.Text = solicitante_f;
+            lblClase.Text = clase_f;
+            lblFecha.Text = fecha_f.ToShortDateString();
+            lblImporte.Text = monto_f.ToString("C2");
+            lblForma.Text = forma_f;
+            lblFechaHoy.Text = DateTime.Now.ToShortDateString();
         }
-        
-        public string? solicitante_f;
-        public string? clase_f;
-        public string? pago_f;
-        public float monto_f;
-        public int numero_f;
-        public DateTime fecha_f;
-        public string? forma_f;
+
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             
@@ -64,9 +76,9 @@ namespace ProyectoIntegrador
             
             lblSolicitante.Text = solicitante_f;
             lblClase.Text = clase_f;
-            lblDia.Text = Convert.ToString(fecha_f);
-            lblMonto.Text = Convert.ToString(monto_f);
-            lblFPago.Text = forma_f;
+            lblFechaHoy.Text = Convert.ToString(fecha_f);
+            lblImp.Text = Convert.ToString(monto_f);
+            lblForma.Text = forma_f;
             
         }
 
