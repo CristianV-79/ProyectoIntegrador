@@ -20,11 +20,11 @@ namespace ProyectoIntegrador.Datos
         //Asignamos valores a las variables de conexion
         private Conexion()
         {
-            this.baseDatos = "Proyecto";
+            this.baseDatos = "proyecto";//cambié Mayúscula "Proyecto" por "proyecto"
             this.servidor = "localhost";
             this.puerto = "3306";
             this.usuario = "root";
-            this.clave = "caro1708";
+            this.clave = "8462";//cambié contraseña
         }
         //Proceso de interaccion
         public MySqlConnection CrearConexion()

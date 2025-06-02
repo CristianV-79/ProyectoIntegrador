@@ -12,4 +12,5 @@ namespace ProyectoIntegrador.Entidades
         public DateTime FechaAlta { get; set; }
         public bool Activo { get; set; } // true = activo, false = inactivo
     }
+        
 }

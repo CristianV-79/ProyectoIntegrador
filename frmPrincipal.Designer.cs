@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             btnAlta = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnClase = new Button();
+            btnPagar = new Button();
             button4 = new Button();
             lblIngreso = new Label();
             btnSalir = new Button();
@@ -48,27 +48,29 @@
             btnAlta.UseVisualStyleBackColor = false;
             btnAlta.Click += btnAlta_Click;
             // 
-            // button2
+            // btnClase
             // 
-            button2.BackColor = Color.SeaGreen;
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(160, 300);
-            button2.Name = "button2";
-            button2.Size = new Size(160, 40);
-            button2.TabIndex = 1;
-            button2.Text = "Actividad";
-            button2.UseVisualStyleBackColor = false;
+            btnClase.BackColor = Color.SeaGreen;
+            btnClase.ForeColor = SystemColors.Control;
+            btnClase.Location = new Point(160, 300);
+            btnClase.Name = "btnClase";
+            btnClase.Size = new Size(160, 40);
+            btnClase.TabIndex = 1;
+            btnClase.Text = "Actividad";
+            btnClase.UseVisualStyleBackColor = false;
+            btnClase.Click += btnClase_Click;
             // 
-            // button3
+            // btnPagar
             // 
-            button3.BackColor = Color.SeaGreen;
-            button3.ForeColor = SystemColors.Control;
-            button3.Location = new Point(505, 127);
-            button3.Name = "button3";
-            button3.Size = new Size(160, 40);
-            button3.TabIndex = 2;
-            button3.Text = "Pagar Cuota";
-            button3.UseVisualStyleBackColor = false;
+            btnPagar.BackColor = Color.SeaGreen;
+            btnPagar.ForeColor = SystemColors.Control;
+            btnPagar.Location = new Point(505, 127);
+            btnPagar.Name = "btnPagar";
+            btnPagar.Size = new Size(160, 40);
+            btnPagar.TabIndex = 2;
+            btnPagar.Text = "Pagar Cuota";
+            btnPagar.UseVisualStyleBackColor = false;
+            btnPagar.Click += btnPagar_Click;
             // 
             // button4
             // 
@@ -112,8 +114,8 @@
             Controls.Add(btnSalir);
             Controls.Add(lblIngreso);
             Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnPagar);
+            Controls.Add(btnClase);
             Controls.Add(btnAlta);
             Name = "frmPrincipal";
             Text = "frmPrincipal";
@@ -125,8 +127,8 @@
         #endregion
 
         private Button btnAlta;
-        private Button button2;
-        private Button button3;
+        private Button btnClase;
+        private Button btnPagar;
         private Button button4;
         private Label lblIngreso;
         private Button btnSalir;

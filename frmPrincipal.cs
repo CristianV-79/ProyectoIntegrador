@@ -36,5 +36,17 @@ namespace ProyectoIntegrador
             this.Hide();
             frmAlta.Show();
         }
+        private void btnClase_Click(object sender, EventArgs e)
+        {
+            frmClase frmClase = new frmClase();
+            this.Hide();
+            frmClase.Show();
+        }
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            frmPagar frmPagar = new frmPagar();
+            this.Hide();
+            frmPagar.Show();
+        }
     }
 }
