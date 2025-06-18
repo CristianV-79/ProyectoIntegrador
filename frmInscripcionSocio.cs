@@ -12,17 +12,17 @@ using ProyectoIntegrador.Entidades;
 
 namespace ProyectoIntegrador
 {
-    public partial class frmAlta : Form
+    public partial class frmInscripcionSocio : Form
     {
         private string rol;
         private string usuario;
-        public frmAlta(string usuario, string rol)
+        public frmInscripcionSocio(string usuario, string rol)
         {
             InitializeComponent();
             this.usuario = usuario;
             this.rol = rol;
         }
-        private void frmAlta_Load(object sender, EventArgs e)
+        private void frmInscripcionSocio_Load(object sender, EventArgs e)
         {
             lblIngreso.Text = "USUARIO: " + usuario + " " + "(" + rol + ")";
         }

@@ -1,6 +1,6 @@
 ﻿namespace ProyectoIntegrador
 {
-    partial class frmAlta
+    partial class frmInscripcionSocio
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,7 @@
             // lblIngreso
             // 
             lblIngreso.AutoSize = true;
-            lblIngreso.Location = new Point(34, 29);
+            lblIngreso.Location = new Point(35, 20);
             lblIngreso.Name = "lblIngreso";
             lblIngreso.Size = new Size(69, 15);
             lblIngreso.TabIndex = 1;
@@ -259,7 +259,7 @@
             lblTitle.Text = "Alta Nuevo Socio";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // frmAlta
+            // frmInscripcionSocio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -286,7 +286,7 @@
             Controls.Add(lblIngreso);
             Controls.Add(btnVolver);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "frmAlta";
+            Name = "frmInscripcionSocio";
             Text = "frmAlta";
             ResumeLayout(false);
             PerformLayout();

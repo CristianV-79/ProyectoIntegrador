@@ -1,5 +1,5 @@
-/*drop database if exists proyecto;*/
-/*create database proyecto;*/
+drop database if exists proyecto;
+create database proyecto;
 use proyecto;
 
 create table roles(
@@ -114,14 +114,6 @@ NSolic int,
 foreign key (NSolic) references solicitante (NSolic)
 );
 
-/* insert dato de solicitante */
-insert into solicitante (NSolic,nombreS, apellidoS) values (1,'Romina', 'Galman');
-alter table nosocio
-modify column Email varchar(50);
-insert into nosocio(Nombre, Apellido, Telefono, Email, NSolic) values ('Romina', 'Galman', 3517448216, 'gal_romi37@hotmail.com',1);
-insert into edicion (IdEdicion, IdClase, fecha) values (1,2, '2025-06-10');
-insert into inscripcion (IdInscri,IdEdicion, CodNoSoc) values (1,1,1);
-
 create table edicion (
     IdEdicion int primary key,
     IdClase int,
@@ -137,11 +129,13 @@ CREATE TABLE inscripcion (
     foreign key (CodNoSoc) references nosocio(CodNoSoc)
 );
 
-
-/*create table inscripcion(
-IdInscripcion int auto_increment,
-FechaInscripcion date not null
-);*/
+/* insert dato de solicitante */
+insert into solicitante (NSolic,nombreS, apellidoS) values (1,'Romina', 'Galman');
+alter table nosocio
+modify column Email varchar(50);
+insert into nosocio(Nombre, Apellido, Telefono, Email, NSolic) values ('Romina', 'Galman', 3517448216, 'gal_romi37@hotmail.com',1);
+insert into edicion (IdEdicion, IdClase, fecha) values (1,2, '2025-06-10');
+insert into inscripcion (IdInscri,IdEdicion, CodNoSoc) values (1,1,1);
 
 
 /* CREACION DEL PROCEDIMIENTO IngresoLogin */
