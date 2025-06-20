@@ -1,5 +1,5 @@
-/*drop database if exists proyecto;*/
-/*create database proyecto;*/
+drop database if exists proyecto;
+create database proyecto;
 use proyecto;
 
 create table roles(
