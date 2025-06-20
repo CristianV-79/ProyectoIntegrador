@@ -47,5 +47,10 @@ namespace ProyectoIntegrador
         {
             Application.Exit();
         }
+        private void btnEstadoCuenta_Click(object sender, EventArgs e)
+        {
+            frmEstadoCuentas estadoCuentas = new frmEstadoCuentas();
+            estadoCuentas.ShowDialog();
+        }
     }
 }

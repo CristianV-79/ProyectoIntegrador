@@ -39,6 +39,13 @@ Activo boolean default true not null,
 constraint pk_socio primary key (CodSoc)
 );
 
+/*insert into/ datos de socios*/
+INSERT INTO socio (Nombre, Apellido, Dni, FechaNacimiento, Email, Telefono, Direccion, FechaAlta)
+VALUES 
+('Lucía', 'Pérez', 33445566, '1990-03-15', 'lucia.perez@mail.com', '3511111111', 'Calle Falsa 123', '2024-04-18'),
+('Tomás', 'González', 44556677, '1985-08-10', 'tomas.g@mail.com', '3512222222', 'Av. Siempreviva 742', '2024-05-20'),
+('Micaela', 'Suárez', 55667788, '1992-12-01', 'mica.suarez@mail.com', '3513333333', 'Mitre 456', '2025-01-08');
+
 create table solicitante(
 NSolic int primary key,
 nombreS varchar(30) not null,
@@ -116,6 +123,17 @@ create table cuota (
      CodSoc int not null,
      foreign key (CodSoc) references socio(CodSoc)
 );
+
+/*Insert into/datos para cuotas*/
+
+INSERT INTO cuota (Descricion, Monto, FechaVencimiento, CodSoc) VALUES
+('Cuota junio', 19000, CURDATE(), 1),         
+('Cuota julio', 19000, CURDATE() + INTERVAL 13 DAY, 1),
+('Cuota junio', 19000, CURDATE(), 2),         
+('Cuota julio', 19000, CURDATE() + INTERVAL 12 DAY, 2),
+('Cuota junio', 19000, CURDATE() + INTERVAL 3 DAY, 3),
+('Cuota julio', 19000, CURDATE() + INTERVAL 11 DAY, 3);
+
 
 create table edicion (
     IdEdicion int primary key,

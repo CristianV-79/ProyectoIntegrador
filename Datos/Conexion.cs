@@ -24,7 +24,7 @@ namespace ProyectoIntegrador.Datos
             this.servidor = "localhost";
             this.puerto = "3306";
             this.usuario = "root";
-            this.clave = "";
+            this.clave = "8462";
         }
         //Proceso de interaccion
         public MySqlConnection CrearConexion()

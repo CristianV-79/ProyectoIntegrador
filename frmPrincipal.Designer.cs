@@ -86,6 +86,7 @@
             btnEstadoCuenta.TabIndex = 3;
             btnEstadoCuenta.Text = "Estado de Cuentas";
             btnEstadoCuenta.UseVisualStyleBackColor = false;
+            btnEstadoCuenta.Click += btnEstadoCuenta_Click;
             // 
             // lblIngreso
             // 
