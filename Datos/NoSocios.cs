@@ -26,7 +26,7 @@ namespace ProyectoIntegrador.Datos
                 comando.Parameters.Add("Ape", MySqlDbType.VarChar).Value = no_socio.Apellido;
                 comando.Parameters.Add("pDni", MySqlDbType.Int32).Value = no_socio.Dni;
                 comando.Parameters.Add("FeNac", MySqlDbType.Date).Value = no_socio.FechaNacimiento;
-                comando.Parameters.Add("Tel", MySqlDbType.VarChar).Value = no_socio.Telefono;
+                comando.Parameters.Add("Email", MySqlDbType.VarChar).Value = no_socio.Email;
                 comando.Parameters.Add("FeAlta", MySqlDbType.Date).Value = no_socio.FechaAlta;
                 comando.Parameters.Add("NSolic", MySqlDbType.Int32).Value = null;
 
