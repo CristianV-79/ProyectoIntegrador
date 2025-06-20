@@ -25,28 +25,27 @@ namespace ProyectoIntegrador
             lblIngreso.Text = "USUARIO: " + usuario + " " + "(" + rol + ")";
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnInscripciones_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void btnAlta_Click(object sender, EventArgs e)
-        {
-            frmAlta frmAlta = new frmAlta(usuario, rol);
+            frmInscripciones frmInscripciones = new frmInscripciones(usuario, rol);
+            frmInscripciones.Show();
             this.Hide();
-            frmAlta.Show();
         }
         private void btnClase_Click(object sender, EventArgs e)
         {
             frmClase frmClase = new frmClase();
-            this.Hide();
             frmClase.Show();
+            this.Hide();
         }
         private void btnPagar_Click(object sender, EventArgs e)
         {
             frmPagar frmPagar = new frmPagar(usuario,rol);
-            this.Hide();
             frmPagar.Show();
+            this.Hide();
+        }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
