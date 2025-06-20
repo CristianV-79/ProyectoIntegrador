@@ -40,10 +40,10 @@
             // 
             btnInscripciones.BackColor = Color.SeaGreen;
             btnInscripciones.ForeColor = SystemColors.Control;
-            btnInscripciones.Location = new Point(145, 90);
-            btnInscripciones.Margin = new Padding(3, 2, 3, 2);
+            btnInscripciones.Location = new Point(207, 150);
+            btnInscripciones.Margin = new Padding(4, 3, 4, 3);
             btnInscripciones.Name = "btnInscripciones";
-            btnInscripciones.Size = new Size(140, 30);
+            btnInscripciones.Size = new Size(200, 50);
             btnInscripciones.TabIndex = 0;
             btnInscripciones.Text = "INSCRIPCIONES";
             btnInscripciones.UseVisualStyleBackColor = false;
@@ -53,10 +53,10 @@
             // 
             btnClase.BackColor = Color.SeaGreen;
             btnClase.ForeColor = SystemColors.Control;
-            btnClase.Location = new Point(140, 225);
-            btnClase.Margin = new Padding(3, 2, 3, 2);
+            btnClase.Location = new Point(200, 375);
+            btnClase.Margin = new Padding(4, 3, 4, 3);
             btnClase.Name = "btnClase";
-            btnClase.Size = new Size(140, 30);
+            btnClase.Size = new Size(200, 50);
             btnClase.TabIndex = 1;
             btnClase.Text = "Actividad";
             btnClase.UseVisualStyleBackColor = false;
@@ -66,10 +66,10 @@
             // 
             btnPagar.BackColor = Color.SeaGreen;
             btnPagar.ForeColor = SystemColors.Control;
-            btnPagar.Location = new Point(442, 95);
-            btnPagar.Margin = new Padding(3, 2, 3, 2);
+            btnPagar.Location = new Point(631, 158);
+            btnPagar.Margin = new Padding(4, 3, 4, 3);
             btnPagar.Name = "btnPagar";
-            btnPagar.Size = new Size(140, 30);
+            btnPagar.Size = new Size(200, 50);
             btnPagar.TabIndex = 2;
             btnPagar.Text = "Pagar Cuota";
             btnPagar.UseVisualStyleBackColor = false;
@@ -79,10 +79,10 @@
             // 
             btnEstadoCuenta.BackColor = Color.SeaGreen;
             btnEstadoCuenta.ForeColor = SystemColors.Control;
-            btnEstadoCuenta.Location = new Point(442, 225);
-            btnEstadoCuenta.Margin = new Padding(3, 2, 3, 2);
+            btnEstadoCuenta.Location = new Point(631, 375);
+            btnEstadoCuenta.Margin = new Padding(4, 3, 4, 3);
             btnEstadoCuenta.Name = "btnEstadoCuenta";
-            btnEstadoCuenta.Size = new Size(140, 30);
+            btnEstadoCuenta.Size = new Size(200, 50);
             btnEstadoCuenta.TabIndex = 3;
             btnEstadoCuenta.Text = "Estado de Cuentas";
             btnEstadoCuenta.UseVisualStyleBackColor = false;
@@ -90,9 +90,10 @@
             // lblIngreso
             // 
             lblIngreso.AutoSize = true;
-            lblIngreso.Location = new Point(31, 24);
+            lblIngreso.Location = new Point(44, 40);
+            lblIngreso.Margin = new Padding(4, 0, 4, 0);
             lblIngreso.Name = "lblIngreso";
-            lblIngreso.Size = new Size(69, 15);
+            lblIngreso.Size = new Size(104, 25);
             lblIngreso.TabIndex = 4;
             lblIngreso.Text = "Usuario/Rol";
             // 
@@ -100,10 +101,10 @@
             // 
             btnSalir.BackColor = Color.SeaGreen;
             btnSalir.ForeColor = SystemColors.Control;
-            btnSalir.Location = new Point(560, 27);
-            btnSalir.Margin = new Padding(3, 2, 3, 2);
+            btnSalir.Location = new Point(800, 45);
+            btnSalir.Margin = new Padding(4, 3, 4, 3);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(82, 22);
+            btnSalir.Size = new Size(117, 37);
             btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
@@ -111,19 +112,20 @@
             // 
             // frmPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(1000, 563);
             Controls.Add(btnSalir);
             Controls.Add(lblIngreso);
             Controls.Add(btnEstadoCuenta);
             Controls.Add(btnPagar);
             Controls.Add(btnClase);
             Controls.Add(btnInscripciones);
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "frmPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPrincipal";
             Load += frmPrincipal_Load;
             ResumeLayout(false);

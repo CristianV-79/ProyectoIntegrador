@@ -53,10 +53,10 @@
             // 
             btnVolver.BackColor = Color.SeaGreen;
             btnVolver.ForeColor = SystemColors.Control;
-            btnVolver.Location = new Point(573, 21);
-            btnVolver.Margin = new Padding(3, 2, 3, 2);
+            btnVolver.Location = new Point(819, 35);
+            btnVolver.Margin = new Padding(4, 3, 4, 3);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(82, 22);
+            btnVolver.Size = new Size(120, 39);
             btnVolver.TabIndex = 0;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = false;
@@ -65,9 +65,10 @@
             // lblIngreso
             // 
             lblIngreso.AutoSize = true;
-            lblIngreso.Location = new Point(35, 20);
+            lblIngreso.Location = new Point(50, 33);
+            lblIngreso.Margin = new Padding(4, 0, 4, 0);
             lblIngreso.Name = "lblIngreso";
-            lblIngreso.Size = new Size(69, 15);
+            lblIngreso.Size = new Size(104, 25);
             lblIngreso.TabIndex = 1;
             lblIngreso.Text = "Usuario/Rol";
             // 
@@ -75,10 +76,10 @@
             // 
             btnInscribir.BackColor = Color.SeaGreen;
             btnInscribir.ForeColor = SystemColors.Control;
-            btnInscribir.Location = new Point(204, 273);
-            btnInscribir.Margin = new Padding(3, 2, 3, 2);
+            btnInscribir.Location = new Point(291, 455);
+            btnInscribir.Margin = new Padding(4, 3, 4, 3);
             btnInscribir.Name = "btnInscribir";
-            btnInscribir.Size = new Size(108, 39);
+            btnInscribir.Size = new Size(154, 65);
             btnInscribir.TabIndex = 4;
             btnInscribir.Text = "Inscribir";
             btnInscribir.UseVisualStyleBackColor = false;
@@ -88,10 +89,10 @@
             // 
             btnLimpiar.BackColor = Color.SeaGreen;
             btnLimpiar.ForeColor = SystemColors.Control;
-            btnLimpiar.Location = new Point(375, 273);
-            btnLimpiar.Margin = new Padding(3, 2, 3, 2);
+            btnLimpiar.Location = new Point(536, 455);
+            btnLimpiar.Margin = new Padding(4, 3, 4, 3);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(108, 39);
+            btnLimpiar.Size = new Size(154, 65);
             btnLimpiar.TabIndex = 5;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = false;
@@ -99,59 +100,59 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(195, 92);
-            txtNombre.Margin = new Padding(3, 2, 3, 2);
+            txtNombre.Location = new Point(279, 153);
+            txtNombre.Margin = new Padding(4, 3, 4, 3);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(130, 23);
+            txtNombre.Size = new Size(184, 31);
             txtNombre.TabIndex = 6;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(195, 137);
-            txtApellido.Margin = new Padding(3, 2, 3, 2);
+            txtApellido.Location = new Point(279, 228);
+            txtApellido.Margin = new Padding(4, 3, 4, 3);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(130, 23);
+            txtApellido.Size = new Size(184, 31);
             txtApellido.TabIndex = 7;
             // 
             // txtDni
             // 
-            txtDni.Location = new Point(195, 183);
-            txtDni.Margin = new Padding(3, 2, 3, 2);
+            txtDni.Location = new Point(279, 305);
+            txtDni.Margin = new Padding(4, 3, 4, 3);
             txtDni.Name = "txtDni";
-            txtDni.Size = new Size(130, 23);
+            txtDni.Size = new Size(184, 31);
             txtDni.TabIndex = 8;
             // 
             // txtFeNac
             // 
-            txtFeNac.Location = new Point(195, 227);
-            txtFeNac.Margin = new Padding(3, 2, 3, 2);
+            txtFeNac.Location = new Point(279, 378);
+            txtFeNac.Margin = new Padding(4, 3, 4, 3);
             txtFeNac.Name = "txtFeNac";
-            txtFeNac.Size = new Size(130, 23);
+            txtFeNac.Size = new Size(184, 31);
             txtFeNac.TabIndex = 9;
             txtFeNac.Text = "DD/MM/AAAA";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(417, 92);
-            txtEmail.Margin = new Padding(3, 2, 3, 2);
+            txtEmail.Location = new Point(596, 153);
+            txtEmail.Margin = new Padding(4, 3, 4, 3);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(130, 23);
+            txtEmail.Size = new Size(184, 31);
             txtEmail.TabIndex = 10;
             // 
             // txtTel
             // 
-            txtTel.Location = new Point(417, 137);
-            txtTel.Margin = new Padding(3, 2, 3, 2);
+            txtTel.Location = new Point(596, 228);
+            txtTel.Margin = new Padding(4, 3, 4, 3);
             txtTel.Name = "txtTel";
-            txtTel.Size = new Size(130, 23);
+            txtTel.Size = new Size(184, 31);
             txtTel.TabIndex = 11;
             // 
             // txtDir
             // 
-            txtDir.Location = new Point(417, 183);
-            txtDir.Margin = new Padding(3, 2, 3, 2);
+            txtDir.Location = new Point(596, 305);
+            txtDir.Margin = new Padding(4, 3, 4, 3);
             txtDir.Name = "txtDir";
-            txtDir.Size = new Size(130, 23);
+            txtDir.Size = new Size(184, 31);
             txtDir.TabIndex = 12;
             // 
             // lblNombre
@@ -160,9 +161,10 @@
             lblNombre.BackColor = Color.Transparent;
             lblNombre.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNombre.ForeColor = SystemColors.ButtonHighlight;
-            lblNombre.Location = new Point(127, 92);
+            lblNombre.Location = new Point(181, 153);
+            lblNombre.Margin = new Padding(4, 0, 4, 0);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(62, 17);
+            lblNombre.Size = new Size(94, 28);
             lblNombre.TabIndex = 13;
             lblNombre.Text = "Nombre:";
             lblNombre.TextAlign = ContentAlignment.MiddleCenter;
@@ -173,9 +175,10 @@
             lblApellido.BackColor = Color.Transparent;
             lblApellido.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblApellido.ForeColor = SystemColors.ButtonHighlight;
-            lblApellido.Location = new Point(125, 137);
+            lblApellido.Location = new Point(179, 228);
+            lblApellido.Margin = new Padding(4, 0, 4, 0);
             lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(64, 17);
+            lblApellido.Size = new Size(96, 28);
             lblApellido.TabIndex = 14;
             lblApellido.Text = "Apellido:";
             lblApellido.TextAlign = ContentAlignment.MiddleCenter;
@@ -186,9 +189,10 @@
             lblDni.BackColor = Color.Transparent;
             lblDni.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDni.ForeColor = SystemColors.ButtonHighlight;
-            lblDni.Location = new Point(142, 183);
+            lblDni.Location = new Point(203, 305);
+            lblDni.Margin = new Padding(4, 0, 4, 0);
             lblDni.Name = "lblDni";
-            lblDni.Size = new Size(47, 17);
+            lblDni.Size = new Size(68, 28);
             lblDni.TabIndex = 15;
             lblDni.Text = "D.N.I.:";
             lblDni.TextAlign = ContentAlignment.MiddleCenter;
@@ -199,9 +203,10 @@
             lblFeNac.BackColor = Color.Transparent;
             lblFeNac.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblFeNac.ForeColor = SystemColors.ButtonHighlight;
-            lblFeNac.Location = new Point(48, 227);
+            lblFeNac.Location = new Point(69, 378);
+            lblFeNac.Margin = new Padding(4, 0, 4, 0);
             lblFeNac.Name = "lblFeNac";
-            lblFeNac.Size = new Size(141, 17);
+            lblFeNac.Size = new Size(216, 28);
             lblFeNac.TabIndex = 16;
             lblFeNac.Text = "Fecha de Nacimiento:";
             lblFeNac.TextAlign = ContentAlignment.MiddleCenter;
@@ -212,9 +217,10 @@
             lblEmail.BackColor = Color.Transparent;
             lblEmail.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEmail.ForeColor = SystemColors.ButtonHighlight;
-            lblEmail.Location = new Point(365, 92);
+            lblEmail.Location = new Point(521, 153);
+            lblEmail.Margin = new Padding(4, 0, 4, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(46, 17);
+            lblEmail.Size = new Size(69, 28);
             lblEmail.TabIndex = 17;
             lblEmail.Text = "Email:";
             lblEmail.TextAlign = ContentAlignment.MiddleCenter;
@@ -225,9 +231,10 @@
             lblTel.BackColor = Color.Transparent;
             lblTel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTel.ForeColor = SystemColors.ButtonHighlight;
-            lblTel.Location = new Point(345, 138);
+            lblTel.Location = new Point(493, 230);
+            lblTel.Margin = new Padding(4, 0, 4, 0);
             lblTel.Name = "lblTel";
-            lblTel.Size = new Size(66, 17);
+            lblTel.Size = new Size(99, 28);
             lblTel.TabIndex = 18;
             lblTel.Text = "Teléfono:";
             lblTel.TextAlign = ContentAlignment.MiddleCenter;
@@ -238,9 +245,10 @@
             lblDir.BackColor = Color.Transparent;
             lblDir.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDir.ForeColor = SystemColors.ButtonHighlight;
-            lblDir.Location = new Point(341, 184);
+            lblDir.Location = new Point(487, 307);
+            lblDir.Margin = new Padding(4, 0, 4, 0);
             lblDir.Name = "lblDir";
-            lblDir.Size = new Size(70, 17);
+            lblDir.Size = new Size(107, 28);
             lblDir.TabIndex = 19;
             lblDir.Text = "Dirección:";
             lblDir.TextAlign = ContentAlignment.MiddleCenter;
@@ -252,20 +260,21 @@
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = SystemColors.ButtonHighlight;
-            lblTitle.Location = new Point(258, 29);
+            lblTitle.Location = new Point(369, 48);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(211, 32);
+            lblTitle.Size = new Size(310, 48);
             lblTitle.TabIndex = 20;
             lblTitle.Text = "Alta Nuevo Socio";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // frmInscripcionSocio
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(1000, 563);
             Controls.Add(lblTitle);
             Controls.Add(lblDir);
             Controls.Add(lblTel);
@@ -285,9 +294,10 @@
             Controls.Add(btnInscribir);
             Controls.Add(lblIngreso);
             Controls.Add(btnVolver);
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "frmInscripcionSocio";
-            Text = "frmAlta";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Inscripción de Socios";
             ResumeLayout(false);
             PerformLayout();
         }
