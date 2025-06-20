@@ -29,8 +29,8 @@ namespace ProyectoIntegrador
         private void btnVolver_Click(object sender, EventArgs e)
         {
             frmPrincipal frmPrincipal = new frmPrincipal(usuario, rol);
-            this.Hide();
             frmPrincipal.Show();
+            this.Hide();
         }
 
         private void btnInscribir_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace ProyectoIntegrador
             // Validación de Fecha de Nacimiento
             if (!DateTime.TryParse(txtFeNac.Text, out DateTime fechaNacimiento))
             {
-                MessageBox.Show("La fecha de nacimiento no tiene un formato válido (dd/mm/aaaa)",
+                MessageBox.Show("La fecha de nacimiento no tiene un formato válido (DD/MM/AAAA)",
                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }

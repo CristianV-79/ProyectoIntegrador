@@ -36,7 +36,25 @@ Telefono varchar(15),
 Direccion varchar (40),
 FechaAlta date not null,
 Activo boolean default true not null,
-constraint pk_usuario primary key (CodSoc)
+constraint pk_socio primary key (CodSoc)
+);
+
+create table solicitante(
+NSolic int primary key,
+nombreS varchar(30) not null,
+apellidoS varchar(30) not null);
+
+create table nosocio(
+CodNoSoc int auto_increment,
+Nombre varchar (30) not null,
+Apellido varchar (30) not null,
+Dni int not null,
+FechaNacimiento date not null,
+Telefono varchar (20),
+FechaAlta date not null,
+NSolic int null,
+constraint pk_nosocio primary key (CodNoSoc),
+foreign key (NSolic) references solicitante (NSolic)
 );
 
 create table profesor(
@@ -99,21 +117,6 @@ create table cuota (
      foreign key (CodSoc) references socio(CodSoc)
 );
 
-create table solicitante(
-NSolic int primary key,
-nombreS varchar(30) not null,
-apellidoS varchar(30) not null);
-
-create table nosocio(
-CodNoSoc int auto_increment primary key,
-Nombre varchar (30) not null,
-Apellido varchar (30) not null,
-Telefono varchar (20),
-Email varchar (20),
-NSolic int,
-foreign key (NSolic) references solicitante (NSolic)
-);
-
 create table edicion (
     IdEdicion int primary key,
     IdClase int,
@@ -131,9 +134,7 @@ CREATE TABLE inscripcion (
 
 /* insert dato de solicitante */
 insert into solicitante (NSolic,nombreS, apellidoS) values (1,'Romina', 'Galman');
-alter table nosocio
-modify column Email varchar(50);
-insert into nosocio(Nombre, Apellido, Telefono, Email, NSolic) values ('Romina', 'Galman', 3517448216, 'gal_romi37@hotmail.com',1);
+insert into nosocio(Nombre, Apellido, Dni, FechaNacimiento, Telefono, FechaAlta, NSolic) values ('Romina', 'Galman', 28654735, '1989-05-15', 3517448216, '2024-11-25', 1);
 insert into edicion (IdEdicion, IdClase, fecha) values (1,2, '2025-06-10');
 insert into inscripcion (IdInscri,IdEdicion, CodNoSoc) values (1,1,1);
 
@@ -194,6 +195,37 @@ begin
 		-- Insertamos sin CodSoc, que es autoincremental
 		insert into socio (Nombre, Apellido, Dni, FechaNacimiento, Email, Telefono, Direccion, FechaAlta)
         values (Nom, Ape, pDni, FeNac, Email, Tel, Dir, FeAlta);
+		
+        -- Obtenemos el ID autogenerado
+        select LAST_INSERT_ID() into rta;
+	else
+		set rta = 0;
+	end if;		 
+end //
+
+/* CREACION DEL PROCEDIMIENTO NuevoNoSocio
+*************************************************   */
+delimiter //  
+create procedure NuevoNoSocio(
+	in Nom varchar(30),
+    in Ape varchar(30),
+    in pDni int,
+    in FeNac date,
+    in Tel varchar (15),
+    in FeAlta date,
+    in NSolic int,
+    out rta int)
+
+begin
+	declare existe int default 0;
+    
+    -- Verificamos si el No Socio ya existe por DNI
+    select count(*) into existe from nosocio where Dni = pDni;
+    
+    if existe = 0 then
+		-- Insertamos sin CodNoSoc, que es autoincremental
+		insert into nosocio (Nombre, Apellido, Dni, FechaNacimiento, Telefono, FechaAlta, NSolic)
+        values (Nom, Ape, pDni, FeNac, Tel, FeAlta, NSolic);
 		
         -- Obtenemos el ID autogenerado
         select LAST_INSERT_ID() into rta;

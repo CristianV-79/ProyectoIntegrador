@@ -38,9 +38,10 @@
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(54, 202);
+            txtUsuario.Location = new Point(68, 252);
+            txtUsuario.Margin = new Padding(4, 4, 4, 4);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(203, 27);
+            txtUsuario.Size = new Size(253, 31);
             txtUsuario.TabIndex = 0;
             txtUsuario.Text = "USUARIO";
             txtUsuario.Enter += txtUsuario_Enter;
@@ -48,9 +49,10 @@
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(54, 255);
+            txtContraseña.Location = new Point(68, 319);
+            txtContraseña.Margin = new Padding(4, 4, 4, 4);
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(203, 27);
+            txtContraseña.Size = new Size(253, 31);
             txtContraseña.TabIndex = 1;
             txtContraseña.Text = "CONTRASEÑA";
             txtContraseña.Enter += txtContraseña_Enter;
@@ -61,9 +63,10 @@
             btnIngresar.BackColor = Color.SeaGreen;
             btnIngresar.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnIngresar.ForeColor = Color.White;
-            btnIngresar.Location = new Point(77, 346);
+            btnIngresar.Location = new Point(96, 432);
+            btnIngresar.Margin = new Padding(4, 4, 4, 4);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(169, 37);
+            btnIngresar.Size = new Size(211, 46);
             btnIngresar.TabIndex = 2;
             btnIngresar.Text = "Iniciar Sesion";
             btnIngresar.UseVisualStyleBackColor = false;
@@ -74,9 +77,10 @@
             chkRecordarUsuario.AutoSize = true;
             chkRecordarUsuario.BackColor = Color.Transparent;
             chkRecordarUsuario.ForeColor = SystemColors.ButtonHighlight;
-            chkRecordarUsuario.Location = new Point(77, 301);
+            chkRecordarUsuario.Location = new Point(96, 376);
+            chkRecordarUsuario.Margin = new Padding(4, 4, 4, 4);
             chkRecordarUsuario.Name = "chkRecordarUsuario";
-            chkRecordarUsuario.Size = new Size(143, 24);
+            chkRecordarUsuario.Size = new Size(171, 29);
             chkRecordarUsuario.TabIndex = 3;
             chkRecordarUsuario.Text = "Recordar usuario";
             chkRecordarUsuario.UseVisualStyleBackColor = false;
@@ -90,21 +94,24 @@
             panel1.Controls.Add(txtUsuario);
             panel1.Controls.Add(txtContraseña);
             panel1.Controls.Add(chkRecordarUsuario);
-            panel1.Location = new Point(215, 116);
+            panel1.Location = new Point(269, 145);
+            panel1.Margin = new Padding(4, 4, 4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(314, 418);
+            panel1.Size = new Size(392, 522);
             panel1.TabIndex = 4;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(750, 721);
+            ClientSize = new Size(938, 901);
             Controls.Add(panel1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "frmLogin";
-            Text = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Ingreso al Sistema";
             Load += frmLogin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
