@@ -31,12 +31,12 @@
             lblIngreso = new Label();
             btnVolver = new Button();
             lblTitle = new Label();
-            lblTel = new Label();
+            lblEmail = new Label();
             lblFeNac = new Label();
             lblDni = new Label();
             lblApellido = new Label();
             lblNombre = new Label();
-            txtTel = new TextBox();
+            txtEmail = new TextBox();
             txtFeNac = new TextBox();
             txtDni = new TextBox();
             txtApellido = new TextBox();
@@ -82,19 +82,19 @@
             lblTitle.Text = "Alta No Socio";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // lblTel
+            // lblEmail
             // 
-            lblTel.AutoSize = true;
-            lblTel.BackColor = Color.Transparent;
-            lblTel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTel.ForeColor = SystemColors.ButtonHighlight;
-            lblTel.Location = new Point(600, 301);
-            lblTel.Margin = new Padding(4, 0, 4, 0);
-            lblTel.Name = "lblTel";
-            lblTel.Size = new Size(99, 28);
-            lblTel.TabIndex = 30;
-            lblTel.Text = "Teléfono:";
-            lblTel.TextAlign = ContentAlignment.MiddleCenter;
+            lblEmail.AutoSize = true;
+            lblEmail.BackColor = Color.Transparent;
+            lblEmail.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmail.ForeColor = SystemColors.ButtonHighlight;
+            lblEmail.Location = new Point(628, 301);
+            lblEmail.Margin = new Padding(4, 0, 4, 0);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(69, 28);
+            lblEmail.TabIndex = 34;
+            lblEmail.Text = "Email:";
+            lblEmail.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblFeNac
             // 
@@ -152,13 +152,13 @@
             lblNombre.Text = "Nombre:";
             lblNombre.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // txtTel
+            // txtEmail
             // 
-            txtTel.Location = new Point(703, 299);
-            txtTel.Margin = new Padding(4, 3, 4, 3);
-            txtTel.Name = "txtTel";
-            txtTel.Size = new Size(184, 31);
-            txtTel.TabIndex = 25;
+            txtEmail.Location = new Point(703, 301);
+            txtEmail.Margin = new Padding(4, 3, 4, 3);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(184, 31);
+            txtEmail.TabIndex = 32;
             // 
             // txtFeNac
             // 
@@ -227,12 +227,12 @@
             ClientSize = new Size(1026, 750);
             Controls.Add(btnLimpiar);
             Controls.Add(btnInscribir);
-            Controls.Add(lblTel);
+            Controls.Add(lblEmail);
             Controls.Add(lblFeNac);
             Controls.Add(lblDni);
             Controls.Add(lblApellido);
             Controls.Add(lblNombre);
-            Controls.Add(txtTel);
+            Controls.Add(txtEmail);
             Controls.Add(txtFeNac);
             Controls.Add(txtDni);
             Controls.Add(txtApellido);
@@ -254,12 +254,12 @@
         private Label lblIngreso;
         private Button btnVolver;
         private Label lblTitle;
-        private Label lblTel;
+        private Label lblEmail;
         private Label lblFeNac;
         private Label lblDni;
         private Label lblApellido;
         private Label lblNombre;
-        private TextBox txtTel;
+        private TextBox txtEmail;
         private TextBox txtFeNac;
         private TextBox txtDni;
         private TextBox txtApellido;

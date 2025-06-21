@@ -41,7 +41,7 @@ namespace ProyectoIntegrador
                 string.IsNullOrEmpty(txtApellido.Text) ||
                 string.IsNullOrEmpty(txtDni.Text) ||
                 string.IsNullOrEmpty(txtFeNac.Text) ||
-                string.IsNullOrEmpty(txtTel.Text))
+                string.IsNullOrEmpty(txtEmail.Text))
             {
                 MessageBox.Show("Debe completar todos los datos requeridos",
                 "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -71,7 +71,7 @@ namespace ProyectoIntegrador
                 Apellido = txtApellido.Text,
                 Dni = dni,
                 FechaNacimiento = fechaNacimiento,
-                Telefono = txtTel.Text,
+                Email = txtEmail.Text,
                 FechaAlta = DateTime.Now,
                 NSolic = 0
             };
@@ -100,7 +100,7 @@ namespace ProyectoIntegrador
                         txtNombre.Clear();
                         txtApellido.Clear();
                         txtDni.Clear();
-                        txtTel.Clear();
+                        txtEmail.Clear();
                         txtFeNac.Text = "DD/MM/AAAA";
                     }
                 }
@@ -126,7 +126,7 @@ namespace ProyectoIntegrador
             txtApellido.Text = "";
             txtDni.Text = "";
             txtFeNac.Text = "";
-            txtTel.Text = "";
+            txtEmail.Text = "";
             txtNombre.Focus();
         }
     }
