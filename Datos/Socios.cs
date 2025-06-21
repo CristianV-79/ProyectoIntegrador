@@ -55,5 +55,55 @@ namespace ProyectoIntegrador.Datos
             }
             return salida;
         }
+
+        public E_Socio BuscarSocio(string valorBusqueda)
+        {
+            E_Socio socio = null;
+            // Consulta que busca por CodSoc o por DNI
+            string query = "SELECT * FROM socio WHERE CodSoc = @valor OR Dni = @valor";
+
+            try
+            {
+                // Usar el mismo método para crear la conexión
+                using (MySqlConnection sqlCon = Conexion.getInstancia().CrearConexion())
+                {
+                    sqlCon.Open(); // Ahora la conexión tiene un ConnectionString válido.
+                    using (MySqlCommand cmd = new MySqlCommand(query, sqlCon))
+                    {
+                        // Asignamos el valor al parámetro.
+                        cmd.Parameters.AddWithValue("@valor", valorBusqueda);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                socio = new E_Socio
+                                {
+                                    CodSoc = reader.GetInt32("CodSoc"),
+                                    Nombre = reader.GetString("Nombre"),
+                                    Apellido = reader.GetString("Apellido"),
+                                    Dni = reader.GetInt32("Dni"),
+                                    FechaAlta = reader.GetDateTime("FechaAlta"),
+                                    Email = reader.GetString("Email"),
+                                    Telefono = reader.IsDBNull(reader.GetOrdinal("Telefono"))
+                                                ? string.Empty
+                                                : reader.GetString("Telefono"),
+                                    Direccion = reader.IsDBNull(reader.GetOrdinal("Direccion"))
+                                                ? string.Empty
+                                                : reader.GetString("Direccion")
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Puedes loguear el error o mostrar un mensaje específico.
+                throw new Exception("Error al buscar socio: " + ex.Message);
+            }
+
+            return socio;
+        }
     }
 }
