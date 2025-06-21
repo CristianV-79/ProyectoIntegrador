@@ -41,10 +41,9 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Location = new Point(384, 88);
-            lblTitulo.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo.Location = new Point(307, 70);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(197, 25);
+            lblTitulo.Size = new Size(164, 20);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "LISTA DE ACTIVIDADES";
             // 
@@ -52,11 +51,10 @@
             // 
             dtgvClase.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvClase.Columns.AddRange(new DataGridViewColumn[] { NombreClase, Horario, Precio, Disponibilidad, Profesor });
-            dtgvClase.Location = new Point(71, 166);
-            dtgvClase.Margin = new Padding(4, 4, 4, 4);
+            dtgvClase.Location = new Point(57, 133);
             dtgvClase.Name = "dtgvClase";
             dtgvClase.RowHeadersWidth = 51;
-            dtgvClase.Size = new Size(844, 235);
+            dtgvClase.Size = new Size(675, 188);
             dtgvClase.TabIndex = 1;
             // 
             // NombreClase
@@ -96,13 +94,12 @@
             // 
             // frmClase
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background1;
-            ClientSize = new Size(1000, 562);
+            ClientSize = new Size(800, 450);
             Controls.Add(dtgvClase);
             Controls.Add(lblTitulo);
-            Margin = new Padding(4, 4, 4, 4);
             Name = "frmClase";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmClase";

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using ProyectoIntegrador.Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,8 +31,9 @@ namespace ProyectoIntegrador
         }
         private void frmEstadoCuentas_Load(object sender, EventArgs e)
         {
-            string connectionString = "server=localhost;user=root;database=proyecto;password=8462;";
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            //string connectionString = "server=T_servidor;user=T_usuario;database=proyecto;password=T_clave;";
+            //using (MySqlConnection conn = new MySqlConnection())
+            using (MySqlConnection conn = Conexion.getInstancia().CrearConexion())
             {
                 try
                 {
@@ -60,6 +62,11 @@ namespace ProyectoIntegrador
                 }
                 //MessageBox.Show("Form cargado");
             }
-}
+        }
+
+        private void frmEstadoCuentas_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -112,6 +112,7 @@
             Controls.Add(label1);
             Name = "frmEstadoCuentas";
             Text = "frmEstadoCuentas";
+            Load += frmEstadoCuentas_Load_1;
             ((System.ComponentModel.ISupportInitialize)dtgvCuotaVencer).EndInit();
             ResumeLayout(false);
             PerformLayout();
