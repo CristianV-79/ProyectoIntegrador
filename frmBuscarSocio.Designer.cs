@@ -47,9 +47,9 @@
             label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(145, 30);
             label1.Name = "label1";
-            label1.Size = new Size(178, 31);
+            label1.Size = new Size(198, 31);
             label1.TabIndex = 0;
-            label1.Text = "BUSCAR SOCIO";
+            label1.Text = "BUSCAR CLIENTE";
             label1.Click += label1_Click;
             // 
             // lblInstruccion
@@ -58,15 +58,15 @@
             lblInstruccion.BackColor = Color.Transparent;
             lblInstruccion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblInstruccion.ForeColor = SystemColors.Control;
-            lblInstruccion.Location = new Point(28, 56);
+            lblInstruccion.Location = new Point(52, 56);
             lblInstruccion.Name = "lblInstruccion";
-            lblInstruccion.Size = new Size(199, 20);
+            lblInstruccion.Size = new Size(128, 20);
             lblInstruccion.TabIndex = 1;
-            lblInstruccion.Text = "Ingrese Nro de Socio o DNI";
+            lblInstruccion.Text = "Ingrese Nro DNI:";
             // 
             // txtBusqueda
             // 
-            txtBusqueda.Location = new Point(243, 53);
+            txtBusqueda.Location = new Point(182, 53);
             txtBusqueda.Name = "txtBusqueda";
             txtBusqueda.Size = new Size(183, 27);
             txtBusqueda.TabIndex = 2;
@@ -109,9 +109,9 @@
             btnVolver.BackColor = Color.SeaGreen;
             btnVolver.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVolver.ForeColor = SystemColors.Control;
-            btnVolver.Location = new Point(644, 393);
+            btnVolver.Location = new Point(644, 390);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(120, 30);
+            btnVolver.Size = new Size(120, 40);
             btnVolver.TabIndex = 6;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = false;

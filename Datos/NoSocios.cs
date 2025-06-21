@@ -54,5 +54,53 @@ namespace ProyectoIntegrador.Datos
             }
             return salida;
         }
+
+        public E_NoSocio BuscarNoSocio(string valorBusqueda)
+        {
+            E_NoSocio noSocio = null;
+            string query = "SELECT * FROM nosocio WHERE Dni = @valor";
+
+            try
+            {
+                using (MySqlConnection sqlCon = Conexion.getInstancia().CrearConexion())
+                {
+                    sqlCon.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(query, sqlCon))
+                    {
+                        if (!int.TryParse(valorBusqueda, out int dni))
+                        {
+                            throw new Exception("El DNI ingresado no es válido.");
+                        }
+                        cmd.Parameters.AddWithValue("@valor", dni);
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                noSocio = new E_NoSocio
+                                {
+                                    // Asegurarse de que E_NoSocio tenga las propiedades necesarias.
+                                    CodNoSoc = reader.GetInt32("CodNoSoc"),
+                                    Nombre = reader.GetString("Nombre"),
+                                    Apellido = reader.GetString("Apellido"),
+                                    Dni = reader.GetInt32("Dni"),
+                                    FechaNacimiento = reader.GetDateTime("FechaNacimiento"),
+                                    Email = reader.IsDBNull(reader.GetOrdinal("Email"))
+                                        ? string.Empty
+                                        : reader.GetString("Email"),
+                                    FechaAlta = reader.GetDateTime("FechaAlta")
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar no socio: " + ex.Message);
+            }
+
+            return noSocio;
+        }
     }
 }

@@ -60,7 +60,7 @@ namespace ProyectoIntegrador.Datos
         {
             E_Socio socio = null;
             // Consulta que busca por CodSoc o por DNI
-            string query = "SELECT * FROM socio WHERE CodSoc = @valor OR Dni = @valor";
+            string query = "SELECT * FROM socio WHERE Dni = @valor";
 
             try
             {

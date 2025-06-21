@@ -143,7 +143,7 @@
             btnImprimir.BackColor = Color.SeaGreen;
             btnImprimir.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnImprimir.ForeColor = SystemColors.Control;
-            btnImprimir.Location = new Point(299, 351);
+            btnImprimir.Location = new Point(314, 351);
             btnImprimir.Name = "btnImprimir";
             btnImprimir.Size = new Size(139, 46);
             btnImprimir.TabIndex = 8;
@@ -174,7 +174,7 @@
             btnVolver.ForeColor = SystemColors.Control;
             btnVolver.Location = new Point(597, 25);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(120, 30);
+            btnVolver.Size = new Size(120, 40);
             btnVolver.TabIndex = 10;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = false;
