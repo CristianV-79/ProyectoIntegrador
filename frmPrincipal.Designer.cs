@@ -40,11 +40,12 @@
             // btnInscripciones
             // 
             btnInscripciones.BackColor = Color.SeaGreen;
+            btnInscripciones.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnInscripciones.ForeColor = SystemColors.Control;
-            btnInscripciones.Location = new Point(166, 120);
+            btnInscripciones.Location = new Point(123, 126);
             btnInscripciones.Margin = new Padding(3, 2, 3, 2);
             btnInscripciones.Name = "btnInscripciones";
-            btnInscripciones.Size = new Size(160, 40);
+            btnInscripciones.Size = new Size(160, 90);
             btnInscripciones.TabIndex = 0;
             btnInscripciones.Text = "INSCRIPCIONES";
             btnInscripciones.UseVisualStyleBackColor = false;
@@ -53,39 +54,42 @@
             // btnClase
             // 
             btnClase.BackColor = Color.SeaGreen;
+            btnClase.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnClase.ForeColor = SystemColors.Control;
-            btnClase.Location = new Point(160, 300);
+            btnClase.Location = new Point(123, 300);
             btnClase.Margin = new Padding(3, 2, 3, 2);
             btnClase.Name = "btnClase";
-            btnClase.Size = new Size(160, 40);
+            btnClase.Size = new Size(160, 90);
             btnClase.TabIndex = 1;
-            btnClase.Text = "Actividad";
+            btnClase.Text = "ACTIVIDAD";
             btnClase.UseVisualStyleBackColor = false;
             btnClase.Click += btnClase_Click;
             // 
             // btnPagar
             // 
             btnPagar.BackColor = Color.SeaGreen;
+            btnPagar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnPagar.ForeColor = SystemColors.Control;
-            btnPagar.Location = new Point(505, 126);
+            btnPagar.Location = new Point(534, 126);
             btnPagar.Margin = new Padding(3, 2, 3, 2);
             btnPagar.Name = "btnPagar";
-            btnPagar.Size = new Size(160, 40);
+            btnPagar.Size = new Size(160, 90);
             btnPagar.TabIndex = 2;
-            btnPagar.Text = "Pagar Cuota";
+            btnPagar.Text = "PAGAR";
             btnPagar.UseVisualStyleBackColor = false;
             btnPagar.Click += btnPagar_Click;
             // 
             // btnEstadoCuenta
             // 
             btnEstadoCuenta.BackColor = Color.SeaGreen;
+            btnEstadoCuenta.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnEstadoCuenta.ForeColor = SystemColors.Control;
             btnEstadoCuenta.Location = new Point(330, 211);
             btnEstadoCuenta.Margin = new Padding(3, 2, 3, 2);
             btnEstadoCuenta.Name = "btnEstadoCuenta";
-            btnEstadoCuenta.Size = new Size(160, 40);
+            btnEstadoCuenta.Size = new Size(160, 90);
             btnEstadoCuenta.TabIndex = 3;
-            btnEstadoCuenta.Text = "Estado de Cuentas";
+            btnEstadoCuenta.Text = "ESTADO DE CUENTAS";
             btnEstadoCuenta.UseVisualStyleBackColor = false;
             btnEstadoCuenta.Click += btnEstadoCuenta_Click;
             // 
@@ -101,26 +105,28 @@
             // btnSalir
             // 
             btnSalir.BackColor = Color.SeaGreen;
+            btnSalir.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = SystemColors.Control;
             btnSalir.Location = new Point(640, 36);
             btnSalir.Margin = new Padding(3, 2, 3, 2);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(94, 30);
             btnSalir.TabIndex = 5;
-            btnSalir.Text = "Salir";
+            btnSalir.Text = "SALIR";
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
             // 
             // btnCarnet
             // 
             btnCarnet.BackColor = Color.SeaGreen;
+            btnCarnet.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnCarnet.ForeColor = SystemColors.Control;
-            btnCarnet.Location = new Point(505, 300);
+            btnCarnet.Location = new Point(534, 300);
             btnCarnet.Margin = new Padding(3, 2, 3, 2);
             btnCarnet.Name = "btnCarnet";
-            btnCarnet.Size = new Size(160, 40);
+            btnCarnet.Size = new Size(160, 90);
             btnCarnet.TabIndex = 6;
-            btnCarnet.Text = "Generar Carnet";
+            btnCarnet.Text = "EMITIR CARNET";
             btnCarnet.UseVisualStyleBackColor = false;
             btnCarnet.Click += btnCarnet_Click;
             // 
