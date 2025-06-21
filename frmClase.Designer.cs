@@ -103,7 +103,7 @@
             btnVolver.ForeColor = SystemColors.Control;
             btnVolver.Location = new Point(612, 354);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(120, 30);
+            btnVolver.Size = new Size(120, 40);
             btnVolver.TabIndex = 2;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = false;

@@ -116,7 +116,7 @@ namespace ProyectoIntegrador
                     //frmFactura doc = new frmFactura(solicitante, clase, fecha, monto, forma);
                     frmFactura doc = new frmFactura(solicitante, clase, fecha, monto, forma, usuario, rol);
                     doc.Show();
-                    this.Hide();
+                    //this.Hide();
 
 
                     //comprobar funcionamiento
@@ -125,7 +125,7 @@ namespace ProyectoIntegrador
                      "Debug"
                      );
 
-                    btnComprobante.Enabled = true;
+                    //btnComprobante.Enabled = true;
                 }
                 else
                 {

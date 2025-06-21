@@ -44,21 +44,21 @@ namespace ProyectoIntegrador
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            
+
             btnImprimir.Visible = false;
-            
+
             PrintDocument pd = new PrintDocument();
             pd.PrintPage += new PrintPageEventHandler(ImprimirForm1);
             pd.Print();
 
-            btnImprimir.Visible = true; 
+            btnImprimir.Visible = true;
             MessageBox.Show("Operaación existosa", "AVISO DEL SISTEMA",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
-            frmPrincipal principal = new frmPrincipal(usuario,rol);
+            frmPrincipal principal = new frmPrincipal(usuario, rol);
             principal.Show();
             this.Close();
         }
-       
+
         private void ImprimirForm1(object o, PrintPageEventArgs e)
         {
             int x = SystemInformation.WorkingArea.X;
@@ -73,15 +73,46 @@ namespace ProyectoIntegrador
         }
         private void frmFactura_Load(object sender, EventArgs e)
         {
-            
+
             lblSolicitante.Text = solicitante_f;
             lblClase.Text = clase_f;
             lblFechaHoy.Text = Convert.ToString(fecha_f);
             lblImp.Text = Convert.ToString(monto_f);
             lblForma.Text = forma_f;
-            
+
         }
 
+        private void btnImprimir_Click_1(object sender, EventArgs e)
+        {
+            // Ocultamos el botón de imprimir para que no aparezca en el carnet
+            btnImprimir.Visible = false;
 
+            // Creamos y configuramos el objeto para impresión
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(GenerarComprobante);
+            pd.Print();
+
+            // Volvemos a mostrar el botón
+            btnImprimir.Visible = true;
+
+            MessageBox.Show("Carnet impreso exitosamente.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
+        private void GenerarComprobante(object sender, PrintPageEventArgs e)
+        {
+            // Obtenemos el área del formulario para generar la imagen del carnet
+            Rectangle bounds = new Rectangle(0, 0, this.Width, this.Height);
+            Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height);
+            this.DrawToBitmap(bitmap, bounds);
+            // Dibujamos el bitmap en la página a imprimir
+            e.Graphics.DrawImage(bitmap, new Point(50, 50));
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPagar frmPagar = new frmPagar(usuario,rol);
+            frmPagar.Show();
+            this.Hide();
+        }
     }
 }
