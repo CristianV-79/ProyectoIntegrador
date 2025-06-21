@@ -34,16 +34,17 @@
             btnEstadoCuenta = new Button();
             lblIngreso = new Label();
             btnSalir = new Button();
+            btnCarnet = new Button();
             SuspendLayout();
             // 
             // btnInscripciones
             // 
             btnInscripciones.BackColor = Color.SeaGreen;
             btnInscripciones.ForeColor = SystemColors.Control;
-            btnInscripciones.Location = new Point(207, 150);
-            btnInscripciones.Margin = new Padding(4, 3, 4, 3);
+            btnInscripciones.Location = new Point(166, 120);
+            btnInscripciones.Margin = new Padding(3, 2, 3, 2);
             btnInscripciones.Name = "btnInscripciones";
-            btnInscripciones.Size = new Size(200, 50);
+            btnInscripciones.Size = new Size(160, 40);
             btnInscripciones.TabIndex = 0;
             btnInscripciones.Text = "INSCRIPCIONES";
             btnInscripciones.UseVisualStyleBackColor = false;
@@ -53,10 +54,10 @@
             // 
             btnClase.BackColor = Color.SeaGreen;
             btnClase.ForeColor = SystemColors.Control;
-            btnClase.Location = new Point(200, 375);
-            btnClase.Margin = new Padding(4, 3, 4, 3);
+            btnClase.Location = new Point(160, 300);
+            btnClase.Margin = new Padding(3, 2, 3, 2);
             btnClase.Name = "btnClase";
-            btnClase.Size = new Size(200, 50);
+            btnClase.Size = new Size(160, 40);
             btnClase.TabIndex = 1;
             btnClase.Text = "Actividad";
             btnClase.UseVisualStyleBackColor = false;
@@ -66,10 +67,10 @@
             // 
             btnPagar.BackColor = Color.SeaGreen;
             btnPagar.ForeColor = SystemColors.Control;
-            btnPagar.Location = new Point(631, 158);
-            btnPagar.Margin = new Padding(4, 3, 4, 3);
+            btnPagar.Location = new Point(505, 126);
+            btnPagar.Margin = new Padding(3, 2, 3, 2);
             btnPagar.Name = "btnPagar";
-            btnPagar.Size = new Size(200, 50);
+            btnPagar.Size = new Size(160, 40);
             btnPagar.TabIndex = 2;
             btnPagar.Text = "Pagar Cuota";
             btnPagar.UseVisualStyleBackColor = false;
@@ -79,10 +80,10 @@
             // 
             btnEstadoCuenta.BackColor = Color.SeaGreen;
             btnEstadoCuenta.ForeColor = SystemColors.Control;
-            btnEstadoCuenta.Location = new Point(631, 375);
-            btnEstadoCuenta.Margin = new Padding(4, 3, 4, 3);
+            btnEstadoCuenta.Location = new Point(330, 211);
+            btnEstadoCuenta.Margin = new Padding(3, 2, 3, 2);
             btnEstadoCuenta.Name = "btnEstadoCuenta";
-            btnEstadoCuenta.Size = new Size(200, 50);
+            btnEstadoCuenta.Size = new Size(160, 40);
             btnEstadoCuenta.TabIndex = 3;
             btnEstadoCuenta.Text = "Estado de Cuentas";
             btnEstadoCuenta.UseVisualStyleBackColor = false;
@@ -91,10 +92,9 @@
             // lblIngreso
             // 
             lblIngreso.AutoSize = true;
-            lblIngreso.Location = new Point(44, 40);
-            lblIngreso.Margin = new Padding(4, 0, 4, 0);
+            lblIngreso.Location = new Point(35, 32);
             lblIngreso.Name = "lblIngreso";
-            lblIngreso.Size = new Size(104, 25);
+            lblIngreso.Size = new Size(87, 20);
             lblIngreso.TabIndex = 4;
             lblIngreso.Text = "Usuario/Rol";
             // 
@@ -102,29 +102,43 @@
             // 
             btnSalir.BackColor = Color.SeaGreen;
             btnSalir.ForeColor = SystemColors.Control;
-            btnSalir.Location = new Point(800, 45);
-            btnSalir.Margin = new Padding(4, 3, 4, 3);
+            btnSalir.Location = new Point(640, 36);
+            btnSalir.Margin = new Padding(3, 2, 3, 2);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(117, 37);
+            btnSalir.Size = new Size(94, 30);
             btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
             // 
+            // btnCarnet
+            // 
+            btnCarnet.BackColor = Color.SeaGreen;
+            btnCarnet.ForeColor = SystemColors.Control;
+            btnCarnet.Location = new Point(505, 300);
+            btnCarnet.Margin = new Padding(3, 2, 3, 2);
+            btnCarnet.Name = "btnCarnet";
+            btnCarnet.Size = new Size(160, 40);
+            btnCarnet.TabIndex = 6;
+            btnCarnet.Text = "Generar Carnet";
+            btnCarnet.UseVisualStyleBackColor = false;
+            btnCarnet.Click += btnCarnet_Click;
+            // 
             // frmPrincipal
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1000, 563);
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnCarnet);
             Controls.Add(btnSalir);
             Controls.Add(lblIngreso);
             Controls.Add(btnEstadoCuenta);
             Controls.Add(btnPagar);
             Controls.Add(btnClase);
             Controls.Add(btnInscripciones);
-            Margin = new Padding(4, 3, 4, 3);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPrincipal";
@@ -141,5 +155,6 @@
         private Button btnEstadoCuenta;
         private Label lblIngreso;
         private Button btnSalir;
+        private Button btnCarnet;
     }
 }

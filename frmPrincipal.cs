@@ -39,7 +39,7 @@ namespace ProyectoIntegrador
         }
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            frmPagar frmPagar = new frmPagar(usuario,rol);
+            frmPagar frmPagar = new frmPagar(usuario, rol);
             frmPagar.Show();
             this.Hide();
         }
@@ -51,6 +51,13 @@ namespace ProyectoIntegrador
         {
             frmEstadoCuentas estadoCuentas = new frmEstadoCuentas();
             estadoCuentas.ShowDialog();
+        }
+
+        private void btnCarnet_Click(object sender, EventArgs e)
+        {
+            frmBuscarSocio frmBuscarSocio = new frmBuscarSocio();
+            frmBuscarSocio.Show();
+            this.Hide();
         }
     }
 }
