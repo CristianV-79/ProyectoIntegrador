@@ -35,15 +35,19 @@
             Precio = new DataGridViewTextBoxColumn();
             Disponibilidad = new DataGridViewTextBoxColumn();
             Profesor = new DataGridViewTextBoxColumn();
+            btnVolver = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgvClase).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Location = new Point(307, 70);
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.Control;
+            lblTitulo.Location = new Point(277, 73);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(164, 20);
+            lblTitulo.Size = new Size(261, 31);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "LISTA DE ACTIVIDADES";
             // 
@@ -92,12 +96,26 @@
             Profesor.Name = "Profesor";
             Profesor.Width = 125;
             // 
+            // btnVolver
+            // 
+            btnVolver.BackColor = Color.SeaGreen;
+            btnVolver.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVolver.ForeColor = SystemColors.Control;
+            btnVolver.Location = new Point(612, 354);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(120, 30);
+            btnVolver.TabIndex = 2;
+            btnVolver.Text = "Volver";
+            btnVolver.UseVisualStyleBackColor = false;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // frmClase
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background1;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnVolver);
             Controls.Add(dtgvClase);
             Controls.Add(lblTitulo);
             Name = "frmClase";
@@ -117,5 +135,6 @@
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Disponibilidad;
         private DataGridViewTextBoxColumn Profesor;
+        private Button btnVolver;
     }
 }

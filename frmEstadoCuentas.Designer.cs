@@ -36,15 +36,19 @@
             monto = new DataGridViewTextBoxColumn();
             telefono = new DataGridViewTextBoxColumn();
             email = new DataGridViewTextBoxColumn();
+            btnVolver = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgvCuotaVencer).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(346, 64);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(285, 66);
             label1.Name = "label1";
-            label1.Size = new Size(302, 20);
+            label1.Size = new Size(478, 31);
             label1.TabIndex = 0;
             label1.Text = "LISTADO DE SOCIOS CON CUOTA A VENCER";
             label1.Click += label1_Click;
@@ -102,12 +106,26 @@
             email.Name = "email";
             email.Width = 125;
             // 
+            // btnVolver
+            // 
+            btnVolver.BackColor = Color.SeaGreen;
+            btnVolver.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVolver.ForeColor = SystemColors.Control;
+            btnVolver.Location = new Point(857, 351);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(120, 30);
+            btnVolver.TabIndex = 2;
+            btnVolver.Text = "Volver";
+            btnVolver.UseVisualStyleBackColor = false;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // frmEstadoCuentas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(1011, 450);
+            Controls.Add(btnVolver);
             Controls.Add(dtgvCuotaVencer);
             Controls.Add(label1);
             Name = "frmEstadoCuentas";
@@ -128,5 +146,6 @@
         private DataGridViewTextBoxColumn monto;
         private DataGridViewTextBoxColumn telefono;
         private DataGridViewTextBoxColumn email;
+        private Button btnVolver;
     }
 }

@@ -13,6 +13,8 @@ namespace ProyectoIntegrador
 {
     public partial class frmClase : Form
     {
+        private string rol;
+        private string usuario;
         public frmClase()
         {
             InitializeComponent();
@@ -51,6 +53,13 @@ namespace ProyectoIntegrador
             {
                 MessageBox.Show("Error al cargar cursos: " + ex.Message);
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal frmPrincipal = new frmPrincipal(usuario, rol);
+            frmPrincipal.Show();
+            this.Hide();
         }
     }
 }

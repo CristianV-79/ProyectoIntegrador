@@ -38,6 +38,7 @@
             lblFechaEmision = new Label();
             btnImprimir = new Button();
             panel1 = new Panel();
+            btnVolver = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -166,12 +167,26 @@
             panel1.Size = new Size(654, 210);
             panel1.TabIndex = 9;
             // 
+            // btnVolver
+            // 
+            btnVolver.BackColor = Color.SeaGreen;
+            btnVolver.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVolver.ForeColor = SystemColors.Control;
+            btnVolver.Location = new Point(597, 25);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(120, 30);
+            btnVolver.TabIndex = 10;
+            btnVolver.Text = "Volver";
+            btnVolver.UseVisualStyleBackColor = false;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // frmCarnet
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnVolver);
             Controls.Add(panel1);
             Controls.Add(btnImprimir);
             Name = "frmCarnet";
@@ -194,5 +209,6 @@
         private Label lblFechaEmision;
         private Button btnImprimir;
         private Panel panel1;
+        private Button btnVolver;
     }
 }

@@ -13,6 +13,8 @@ namespace ProyectoIntegrador
 {
     public partial class frmBuscarSocio : Form
     {
+        private string rol;
+        private string usuario;
         public frmBuscarSocio()
         {
             InitializeComponent();
@@ -64,6 +66,13 @@ namespace ProyectoIntegrador
 
             // Se muestra el formulario para que el usuario pueda ver e imprimir el carnet.
             frmCarnet.ShowDialog();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal frmPrincipal = new frmPrincipal(usuario, rol);
+            frmPrincipal.Show();
+            this.Hide();
         }
     }
 }

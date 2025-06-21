@@ -48,20 +48,22 @@
             // lblIngreso
             // 
             lblIngreso.AutoSize = true;
-            lblIngreso.Location = new Point(50, 33);
+            lblIngreso.Location = new Point(45, 26);
+            lblIngreso.Margin = new Padding(2, 0, 2, 0);
             lblIngreso.Name = "lblIngreso";
-            lblIngreso.Size = new Size(104, 25);
+            lblIngreso.Size = new Size(93, 20);
             lblIngreso.TabIndex = 0;
             lblIngreso.Text = "Usuario/Rol";
             // 
             // btnVolver
             // 
             btnVolver.BackColor = Color.SeaGreen;
+            btnVolver.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnVolver.ForeColor = SystemColors.Control;
-            btnVolver.Location = new Point(819, 35);
-            btnVolver.Margin = new Padding(4, 3, 4, 3);
+            btnVolver.Location = new Point(737, 28);
+            btnVolver.Margin = new Padding(3, 2, 3, 2);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(120, 39);
+            btnVolver.Size = new Size(108, 31);
             btnVolver.TabIndex = 1;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = false;
@@ -74,10 +76,9 @@
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lblTitle.ForeColor = SystemColors.ButtonHighlight;
-            lblTitle.Location = new Point(369, 48);
-            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Location = new Point(332, 38);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(249, 48);
+            lblTitle.Size = new Size(210, 41);
             lblTitle.TabIndex = 20;
             lblTitle.Text = "Alta No Socio";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -88,10 +89,9 @@
             lblEmail.BackColor = Color.Transparent;
             lblEmail.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblEmail.ForeColor = SystemColors.ButtonHighlight;
-            lblEmail.Location = new Point(628, 301);
-            lblEmail.Margin = new Padding(4, 0, 4, 0);
+            lblEmail.Location = new Point(565, 241);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(69, 28);
+            lblEmail.Size = new Size(59, 23);
             lblEmail.TabIndex = 34;
             lblEmail.Text = "Email:";
             lblEmail.TextAlign = ContentAlignment.MiddleCenter;
@@ -102,10 +102,9 @@
             lblFeNac.BackColor = Color.Transparent;
             lblFeNac.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblFeNac.ForeColor = SystemColors.ButtonHighlight;
-            lblFeNac.Location = new Point(493, 227);
-            lblFeNac.Margin = new Padding(4, 0, 4, 0);
+            lblFeNac.Location = new Point(443, 182);
             lblFeNac.Name = "lblFeNac";
-            lblFeNac.Size = new Size(216, 28);
+            lblFeNac.Size = new Size(182, 23);
             lblFeNac.TabIndex = 29;
             lblFeNac.Text = "Fecha de Nacimiento:";
             lblFeNac.TextAlign = ContentAlignment.MiddleCenter;
@@ -116,10 +115,9 @@
             lblDni.BackColor = Color.Transparent;
             lblDni.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDni.ForeColor = SystemColors.ButtonHighlight;
-            lblDni.Location = new Point(191, 336);
-            lblDni.Margin = new Padding(4, 0, 4, 0);
+            lblDni.Location = new Point(172, 269);
             lblDni.Name = "lblDni";
-            lblDni.Size = new Size(68, 28);
+            lblDni.Size = new Size(60, 23);
             lblDni.TabIndex = 28;
             lblDni.Text = "D.N.I.:";
             lblDni.TextAlign = ContentAlignment.MiddleCenter;
@@ -130,10 +128,9 @@
             lblApellido.BackColor = Color.Transparent;
             lblApellido.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblApellido.ForeColor = SystemColors.ButtonHighlight;
-            lblApellido.Location = new Point(167, 264);
-            lblApellido.Margin = new Padding(4, 0, 4, 0);
+            lblApellido.Location = new Point(151, 211);
             lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(96, 28);
+            lblApellido.Size = new Size(83, 23);
             lblApellido.TabIndex = 27;
             lblApellido.Text = "Apellido:";
             lblApellido.TextAlign = ContentAlignment.MiddleCenter;
@@ -144,63 +141,63 @@
             lblNombre.BackColor = Color.Transparent;
             lblNombre.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNombre.ForeColor = SystemColors.ButtonHighlight;
-            lblNombre.Location = new Point(169, 191);
-            lblNombre.Margin = new Padding(4, 0, 4, 0);
+            lblNombre.Location = new Point(152, 153);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(94, 28);
+            lblNombre.Size = new Size(81, 23);
             lblNombre.TabIndex = 26;
             lblNombre.Text = "Nombre:";
             lblNombre.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(703, 301);
-            txtEmail.Margin = new Padding(4, 3, 4, 3);
+            txtEmail.Location = new Point(632, 241);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(184, 31);
+            txtEmail.Size = new Size(166, 27);
             txtEmail.TabIndex = 32;
             // 
             // txtFeNac
             // 
-            txtFeNac.Location = new Point(703, 227);
-            txtFeNac.Margin = new Padding(4, 3, 4, 3);
+            txtFeNac.Location = new Point(632, 182);
+            txtFeNac.Margin = new Padding(3, 2, 3, 2);
             txtFeNac.Name = "txtFeNac";
-            txtFeNac.Size = new Size(184, 31);
+            txtFeNac.Size = new Size(166, 27);
             txtFeNac.TabIndex = 24;
             txtFeNac.Text = "DD/MM/AAAA";
             // 
             // txtDni
             // 
-            txtDni.Location = new Point(267, 336);
-            txtDni.Margin = new Padding(4, 3, 4, 3);
+            txtDni.Location = new Point(241, 269);
+            txtDni.Margin = new Padding(3, 2, 3, 2);
             txtDni.Name = "txtDni";
-            txtDni.Size = new Size(184, 31);
+            txtDni.Size = new Size(166, 27);
             txtDni.TabIndex = 23;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(267, 264);
-            txtApellido.Margin = new Padding(4, 3, 4, 3);
+            txtApellido.Location = new Point(241, 211);
+            txtApellido.Margin = new Padding(3, 2, 3, 2);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(184, 31);
+            txtApellido.Size = new Size(166, 27);
             txtApellido.TabIndex = 22;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(267, 191);
-            txtNombre.Margin = new Padding(4, 3, 4, 3);
+            txtNombre.Location = new Point(241, 153);
+            txtNombre.Margin = new Padding(3, 2, 3, 2);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(184, 31);
+            txtNombre.Size = new Size(166, 27);
             txtNombre.TabIndex = 21;
             // 
             // btnLimpiar
             // 
             btnLimpiar.BackColor = Color.SeaGreen;
+            btnLimpiar.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             btnLimpiar.ForeColor = SystemColors.Control;
-            btnLimpiar.Location = new Point(567, 422);
-            btnLimpiar.Margin = new Padding(4, 3, 4, 3);
+            btnLimpiar.Location = new Point(511, 338);
+            btnLimpiar.Margin = new Padding(3, 2, 3, 2);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(154, 65);
+            btnLimpiar.Size = new Size(138, 52);
             btnLimpiar.TabIndex = 32;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = false;
@@ -209,11 +206,12 @@
             // btnInscribir
             // 
             btnInscribir.BackColor = Color.SeaGreen;
+            btnInscribir.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             btnInscribir.ForeColor = SystemColors.Control;
-            btnInscribir.Location = new Point(322, 422);
-            btnInscribir.Margin = new Padding(4, 3, 4, 3);
+            btnInscribir.Location = new Point(290, 338);
+            btnInscribir.Margin = new Padding(3, 2, 3, 2);
             btnInscribir.Name = "btnInscribir";
-            btnInscribir.Size = new Size(154, 65);
+            btnInscribir.Size = new Size(138, 52);
             btnInscribir.TabIndex = 31;
             btnInscribir.Text = "Inscribir";
             btnInscribir.UseVisualStyleBackColor = false;
@@ -221,10 +219,10 @@
             // 
             // frmInscripcionNoSocio
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
-            ClientSize = new Size(1026, 750);
+            ClientSize = new Size(924, 600);
             Controls.Add(btnLimpiar);
             Controls.Add(btnInscribir);
             Controls.Add(lblEmail);
@@ -240,7 +238,8 @@
             Controls.Add(lblTitle);
             Controls.Add(btnVolver);
             Controls.Add(lblIngreso);
-            Margin = new Padding(4, 5, 4, 5);
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmInscripcionNoSocio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inscripción de No Socios";

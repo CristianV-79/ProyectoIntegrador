@@ -14,6 +14,8 @@ namespace ProyectoIntegrador
 {
     public partial class frmEstadoCuentas : Form
     {
+        private string rol;
+        private string usuario;
         public frmEstadoCuentas()
         {
             InitializeComponent();
@@ -67,6 +69,13 @@ namespace ProyectoIntegrador
         private void frmEstadoCuentas_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal frmPrincipal = new frmPrincipal(usuario, rol);
+            frmPrincipal.Show();
+            this.Hide();
         }
     }
 }

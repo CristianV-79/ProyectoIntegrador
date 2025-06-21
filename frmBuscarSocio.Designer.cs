@@ -34,6 +34,7 @@
             btnGenerarCarnet = new Button();
             panel1 = new Panel();
             panel2 = new Panel();
+            btnVolver = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -103,12 +104,26 @@
             panel2.Size = new Size(459, 82);
             panel2.TabIndex = 5;
             // 
+            // btnVolver
+            // 
+            btnVolver.BackColor = Color.SeaGreen;
+            btnVolver.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVolver.ForeColor = SystemColors.Control;
+            btnVolver.Location = new Point(644, 393);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(120, 30);
+            btnVolver.TabIndex = 6;
+            btnVolver.Text = "Volver";
+            btnVolver.UseVisualStyleBackColor = false;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // frmBuscarSocio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnVolver);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "frmBuscarSocio";
@@ -129,5 +144,6 @@
         private Button btnGenerarCarnet;
         private Panel panel1;
         private Panel panel2;
+        private Button btnVolver;
     }
 }

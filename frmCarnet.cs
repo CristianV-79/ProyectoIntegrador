@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoIntegrador.Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace ProyectoIntegrador
 {
     public partial class frmCarnet : Form
     {
+        private string rol;
+        private string usuario;
         // Propiedades para almacenar los datos del socio
         public int SocioNumero { get; set; }      // CodSoc
         public int DniSocio { get; set; }           // Dni
@@ -67,6 +70,13 @@ namespace ProyectoIntegrador
             this.DrawToBitmap(bitmap, bounds);
             // Dibujamos el bitmap en la página a imprimir
             e.Graphics.DrawImage(bitmap, new Point(50, 50));
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmPrincipal frmPrincipal = new frmPrincipal(usuario, rol);
+            frmPrincipal.Show();
+            this.Hide();
         }
     }
 }

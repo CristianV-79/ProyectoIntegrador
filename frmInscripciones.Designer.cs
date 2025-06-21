@@ -39,10 +39,10 @@
             btnSocio.BackColor = Color.SeaGreen;
             btnSocio.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSocio.ForeColor = SystemColors.Control;
-            btnSocio.Location = new Point(207, 233);
-            btnSocio.Margin = new Padding(4, 5, 4, 5);
+            btnSocio.Location = new Point(166, 186);
+            btnSocio.Margin = new Padding(3, 4, 3, 4);
             btnSocio.Name = "btnSocio";
-            btnSocio.Size = new Size(277, 132);
+            btnSocio.Size = new Size(222, 106);
             btnSocio.TabIndex = 0;
             btnSocio.Text = "INSCRIPCION DE SOCIO";
             btnSocio.UseVisualStyleBackColor = false;
@@ -53,10 +53,10 @@
             btnNoSocio.BackColor = Color.SeaGreen;
             btnNoSocio.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNoSocio.ForeColor = SystemColors.Control;
-            btnNoSocio.Location = new Point(641, 235);
-            btnNoSocio.Margin = new Padding(4, 5, 4, 5);
+            btnNoSocio.Location = new Point(513, 188);
+            btnNoSocio.Margin = new Padding(3, 4, 3, 4);
             btnNoSocio.Name = "btnNoSocio";
-            btnNoSocio.Size = new Size(277, 130);
+            btnNoSocio.Size = new Size(222, 104);
             btnNoSocio.TabIndex = 1;
             btnNoSocio.Text = "INSCRIPCION DE NO SOCIO";
             btnNoSocio.UseVisualStyleBackColor = false;
@@ -65,11 +65,12 @@
             // btnVolver
             // 
             btnVolver.BackColor = Color.SeaGreen;
+            btnVolver.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVolver.ForeColor = SystemColors.Control;
-            btnVolver.Location = new Point(857, 50);
-            btnVolver.Margin = new Padding(4, 5, 4, 5);
+            btnVolver.Location = new Point(686, 40);
+            btnVolver.Margin = new Padding(3, 4, 3, 4);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(117, 50);
+            btnVolver.Size = new Size(120, 30);
             btnVolver.TabIndex = 2;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = false;
@@ -78,24 +79,23 @@
             // lblIngreso
             // 
             lblIngreso.AutoSize = true;
-            lblIngreso.Location = new Point(50, 33);
-            lblIngreso.Margin = new Padding(4, 0, 4, 0);
+            lblIngreso.Location = new Point(40, 26);
             lblIngreso.Name = "lblIngreso";
-            lblIngreso.Size = new Size(104, 25);
+            lblIngreso.Size = new Size(87, 20);
             lblIngreso.TabIndex = 3;
             lblIngreso.Text = "Usuario/Rol";
             // 
             // frmInscripciones
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
-            ClientSize = new Size(1143, 750);
+            ClientSize = new Size(914, 600);
             Controls.Add(lblIngreso);
             Controls.Add(btnVolver);
             Controls.Add(btnNoSocio);
             Controls.Add(btnSocio);
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmInscripciones";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmInscripciones";
