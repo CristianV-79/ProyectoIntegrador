@@ -33,7 +33,7 @@ namespace ProyectoIntegrador
             this.usuario = usuario;
             this.rol = rol;
 
-            // Aquí podés mostrar los datos en los controles del formulario, por ejemplo:
+            // Muestra de datos en los controles del formulario
             lblSolicitante.Text = solicitante_f;
             lblClase.Text = clase_f;
             lblFecha.Text = fecha_f.ToShortDateString();
@@ -84,18 +84,20 @@ namespace ProyectoIntegrador
 
         private void btnImprimir_Click_1(object sender, EventArgs e)
         {
-            // Ocultamos el botón de imprimir para que no aparezca en el carnet
+            // Ocultamos los botones
             btnImprimir.Visible = false;
+            btnVolver.Visible = false;
 
             // Creamos y configuramos el objeto para impresión
             PrintDocument pd = new PrintDocument();
             pd.PrintPage += new PrintPageEventHandler(GenerarComprobante);
             pd.Print();
 
-            // Volvemos a mostrar el botón
+            // Volvemos a mostrar los botones
             btnImprimir.Visible = true;
+            btnVolver.Visible = true;
 
-            MessageBox.Show("Carnet impreso exitosamente.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Comprobante impreso exitosamente.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
         private void GenerarComprobante(object sender, PrintPageEventArgs e)
@@ -110,7 +112,7 @@ namespace ProyectoIntegrador
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            frmPagar frmPagar = new frmPagar(usuario,rol);
+            frmPagar frmPagar = new frmPagar(usuario, rol);
             frmPagar.Show();
             this.Hide();
         }

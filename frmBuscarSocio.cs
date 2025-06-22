@@ -15,17 +15,11 @@ namespace ProyectoIntegrador
     {
         private string rol;
         private string usuario;
-        public frmBuscarSocio()
+        public frmBuscarSocio(string usuario, string rol)
         {
             InitializeComponent();
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void frmBuscarSocio_Load(object sender, EventArgs e)
-        {
-
+            this.usuario = usuario;
+            this.rol = rol;
         }
 
         private void btnGenerarCarnet_Click(object sender, EventArgs e)
@@ -46,7 +40,7 @@ namespace ProyectoIntegrador
             if (socioEncontrado != null)
             {
                 // Si se encontró en socios, se genera el carnet con los datos recuperados.
-                frmCarnet frmCarnet = new frmCarnet
+                frmCarnet frmCarnet = new frmCarnet(usuario, rol)
                 {
                     SocioNumero = socioEncontrado.CodSoc,
                     DniSocio = socioEncontrado.Dni,
@@ -62,32 +56,7 @@ namespace ProyectoIntegrador
             }
             else
             {
-                // Si no se encontró en la tabla de socios, se busca en la de no socios (también por DNI)
-                Datos.NoSocios datosNoSocios = new Datos.NoSocios();
-                E_NoSocio noSocioEncontrado = datosNoSocios.BuscarNoSocio(valorBusqueda);
-
-                if (noSocioEncontrado != null)
-                {
-                    // Generamos el carnet con los datos proporcionados; 
-                    // observá que puede ser que en la entidad de NoSocio se utilice otra propiedad para el identificador (por ejemplo, CodNoSoc).
-                    frmCarnet frmCarnet = new frmCarnet
-                    {
-                        SocioNumero = noSocioEncontrado.CodNoSoc,  // o una propiedad equivalente para identificar a los no socios
-                        DniSocio = noSocioEncontrado.Dni,
-                        NombreSocio = noSocioEncontrado.Nombre,
-                        ApellidoSocio = noSocioEncontrado.Apellido,
-                        FechaAltaSocio = noSocioEncontrado.FechaAlta,
-                        EmailSocio = noSocioEncontrado.Email,
-                        TelefonoSocio = noSocioEncontrado.Telefono,
-                        DireccionSocio = noSocioEncontrado.Direccion
-                    };
-
-                    frmCarnet.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("No se encontró ningún socio o no socio con ese DNI.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                MessageBox.Show("No se encontró ningún socio con ese DNI. Los no socios no pueden tener carnet", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

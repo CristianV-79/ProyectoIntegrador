@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblTitulo = new Label();
             lblInstruccion = new Label();
             txtBusqueda = new TextBox();
             btnGenerarCarnet = new Button();
@@ -39,18 +39,18 @@
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // lblTitulo
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Green;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(145, 30);
-            label1.Name = "label1";
-            label1.Size = new Size(198, 31);
-            label1.TabIndex = 0;
-            label1.Text = "BUSCAR CLIENTE";
-            label1.Click += label1_Click;
+            lblTitulo.AutoSize = true;
+            lblTitulo.BackColor = Color.Green;
+            lblTitulo.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.Control;
+            lblTitulo.Location = new Point(181, 38);
+            lblTitulo.Margin = new Padding(4, 0, 4, 0);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(218, 38);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "BUSCAR SOCIO";
             // 
             // lblInstruccion
             // 
@@ -58,17 +58,19 @@
             lblInstruccion.BackColor = Color.Transparent;
             lblInstruccion.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblInstruccion.ForeColor = SystemColors.Control;
-            lblInstruccion.Location = new Point(52, 56);
+            lblInstruccion.Location = new Point(65, 70);
+            lblInstruccion.Margin = new Padding(4, 0, 4, 0);
             lblInstruccion.Name = "lblInstruccion";
-            lblInstruccion.Size = new Size(128, 20);
+            lblInstruccion.Size = new Size(155, 25);
             lblInstruccion.TabIndex = 1;
             lblInstruccion.Text = "Ingrese Nro DNI:";
             // 
             // txtBusqueda
             // 
-            txtBusqueda.Location = new Point(182, 53);
+            txtBusqueda.Location = new Point(228, 66);
+            txtBusqueda.Margin = new Padding(4);
             txtBusqueda.Name = "txtBusqueda";
-            txtBusqueda.Size = new Size(183, 27);
+            txtBusqueda.Size = new Size(228, 31);
             txtBusqueda.TabIndex = 2;
             // 
             // btnGenerarCarnet
@@ -76,9 +78,10 @@
             btnGenerarCarnet.BackColor = Color.SeaGreen;
             btnGenerarCarnet.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGenerarCarnet.ForeColor = SystemColors.Control;
-            btnGenerarCarnet.Location = new Point(114, 128);
+            btnGenerarCarnet.Location = new Point(142, 160);
+            btnGenerarCarnet.Margin = new Padding(4);
             btnGenerarCarnet.Name = "btnGenerarCarnet";
-            btnGenerarCarnet.Size = new Size(237, 48);
+            btnGenerarCarnet.Size = new Size(296, 60);
             btnGenerarCarnet.TabIndex = 3;
             btnGenerarCarnet.Text = "Generar Carnet";
             btnGenerarCarnet.UseVisualStyleBackColor = false;
@@ -90,18 +93,20 @@
             panel1.Controls.Add(btnGenerarCarnet);
             panel1.Controls.Add(txtBusqueda);
             panel1.Controls.Add(lblInstruccion);
-            panel1.Location = new Point(143, 156);
+            panel1.Location = new Point(179, 195);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(459, 218);
+            panel1.Size = new Size(574, 272);
             panel1.TabIndex = 4;
             // 
             // panel2
             // 
             panel2.BackColor = Color.Green;
-            panel2.Controls.Add(label1);
-            panel2.Location = new Point(143, 68);
+            panel2.Controls.Add(lblTitulo);
+            panel2.Location = new Point(179, 85);
+            panel2.Margin = new Padding(4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(459, 82);
+            panel2.Size = new Size(574, 102);
             panel2.TabIndex = 5;
             // 
             // btnVolver
@@ -109,9 +114,10 @@
             btnVolver.BackColor = Color.SeaGreen;
             btnVolver.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVolver.ForeColor = SystemColors.Control;
-            btnVolver.Location = new Point(644, 390);
+            btnVolver.Location = new Point(805, 488);
+            btnVolver.Margin = new Padding(4);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(120, 40);
+            btnVolver.Size = new Size(150, 50);
             btnVolver.TabIndex = 6;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = false;
@@ -119,16 +125,17 @@
             // 
             // frmBuscarSocio
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1000, 562);
             Controls.Add(btnVolver);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            Margin = new Padding(4);
             Name = "frmBuscarSocio";
-            Text = "frmBuscarSocio";
-            Load += frmBuscarSocio_Load;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Buscar Socio";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -138,7 +145,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblTitulo;
         private Label lblInstruccion;
         private TextBox txtBusqueda;
         private Button btnGenerarCarnet;

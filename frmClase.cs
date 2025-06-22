@@ -15,9 +15,11 @@ namespace ProyectoIntegrador
     {
         private string rol;
         private string usuario;
-        public frmClase()
+        public frmClase(string usuario, string rol)
         {
             InitializeComponent();
+            this.usuario = usuario;
+            this.rol = rol;
             this.Load += frmClase_Load;
         }
         private void frmClase_Load(object sender, EventArgs e)

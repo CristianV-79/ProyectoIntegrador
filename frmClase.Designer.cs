@@ -45,9 +45,10 @@
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = SystemColors.Control;
-            lblTitulo.Location = new Point(277, 73);
+            lblTitulo.Location = new Point(346, 91);
+            lblTitulo.Margin = new Padding(4, 0, 4, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(261, 31);
+            lblTitulo.Size = new Size(325, 38);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "LISTA DE ACTIVIDADES";
             // 
@@ -55,10 +56,11 @@
             // 
             dtgvClase.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvClase.Columns.AddRange(new DataGridViewColumn[] { NombreClase, Horario, Precio, Disponibilidad, Profesor });
-            dtgvClase.Location = new Point(57, 133);
+            dtgvClase.Location = new Point(71, 166);
+            dtgvClase.Margin = new Padding(4, 4, 4, 4);
             dtgvClase.Name = "dtgvClase";
             dtgvClase.RowHeadersWidth = 51;
-            dtgvClase.Size = new Size(675, 188);
+            dtgvClase.Size = new Size(844, 235);
             dtgvClase.TabIndex = 1;
             // 
             // NombreClase
@@ -101,9 +103,10 @@
             btnVolver.BackColor = Color.SeaGreen;
             btnVolver.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVolver.ForeColor = SystemColors.Control;
-            btnVolver.Location = new Point(612, 354);
+            btnVolver.Location = new Point(765, 442);
+            btnVolver.Margin = new Padding(4, 4, 4, 4);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(120, 40);
+            btnVolver.Size = new Size(150, 50);
             btnVolver.TabIndex = 2;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = false;
@@ -111,16 +114,17 @@
             // 
             // frmClase
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background1;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1000, 562);
             Controls.Add(btnVolver);
             Controls.Add(dtgvClase);
             Controls.Add(lblTitulo);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "frmClase";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmClase";
+            Text = "Lista de Actividades";
             ((System.ComponentModel.ISupportInitialize)dtgvClase).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -14,7 +14,6 @@ namespace ProyectoIntegrador
 {
     public partial class frmPagar : Form
     {
-        //public frmFactura doc = new frmFactura();
         private string usuario;
         private string rol;
         public frmPagar(string usuario, string rol)
@@ -25,10 +24,6 @@ namespace ProyectoIntegrador
             this.Load += frmPagar_Load;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void frmPagar_Load(object sender, EventArgs e)
         {
             cmbTipoPago.Items.Add("Pago de cuota");
@@ -43,12 +38,6 @@ namespace ProyectoIntegrador
             this.Hide();
         }
 
-        /*private void btnComprobante_Click(object sender, EventArgs e)
-        {
-            doc.Show();
-            this.Hide();
-        }*/
-
         private void btnPagar_Click(object sender, EventArgs e)
         {
             string tipoPago = cmbTipoPago.SelectedItem.ToString();
@@ -62,9 +51,9 @@ namespace ProyectoIntegrador
                 if (tipoPago == "Pago de cuota")
                 {
                     //pago de cuota mensual
-                    query = "SELECT idcuota, descricion, CONCAT(nombre, ' ', apellido), monto, fechaVencimiento " +
+                    query = "SELECT idcuota, descripcion, CONCAT(nombre, ' ', apellido), monto, fechaVencimiento " +
                             "FROM cuota c INNER JOIN socio s ON c.CodSoc = s.CodSoc " +
-                            "WHERE idcuota = " + txtNro.Text;
+                            "WHERE c.Pagada = false and c.CodSoc = " + txtNro.Text;
                 }
                 else // Pago de actividad
                 {
@@ -86,34 +75,16 @@ namespace ProyectoIntegrador
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    /*
-                    doc.numero_f = reader.GetInt32(0); ;
-                    doc.clase_f = reader.GetString(1);
-                    doc.solicitante_f = reader.GetString(2);
-                    doc.monto_f = (float)reader.GetDouble(3); ;
-                    doc.fecha_f = reader.GetDateTime(4); */
 
-                    /*if (optEfvo.Checked)
-                    {
-                        doc.forma_f = "Efectivo";
-                        doc.monto_f = (float)(doc.monto_f * 0.90); // 10% de descuento
-                    }
-                    else
-                    {
-                        doc.forma_f = "Tarjeta";
-                    }*/
                     string solicitante = reader.GetString(2);
                     string clase = reader.GetString(1);
                     DateTime fecha = reader.GetDateTime(4);
-                    //DateTime fecha = Convert.ToDateTime(reader.GetString(4));
-                    //float monto = (float)Convert.ToDouble(reader.GetString(3));
                     float monto = (float)reader.GetDouble(3);
                     string forma = optEfvo.Checked ? "Efectivo" : "Tarjeta";
 
                     if (forma == "Efectivo")
                         monto *= 0.90f;
 
-                    //frmFactura doc = new frmFactura(solicitante, clase, fecha, monto, forma);
                     frmFactura doc = new frmFactura(solicitante, clase, fecha, monto, forma, usuario, rol);
                     doc.Show();
                     //this.Hide();
@@ -125,7 +96,18 @@ namespace ProyectoIntegrador
                      "Debug"
                      );
 
-                    //btnComprobante.Enabled = true;
+                    
+                    // Marcar la cuota como pagada si es tipo "Pago de cuota"
+                    if (tipoPago == "Pago de cuota")
+                    {
+                        int idCuota = reader.GetInt32(0);
+                        reader.Close();
+
+                        string updateQuery = "UPDATE cuota SET Pagada = true WHERE idcuota = @idcuota";
+                        MySqlCommand updateCommand = new MySqlCommand(updateQuery, sqlCon);
+                        updateCommand.Parameters.AddWithValue("@idcuota", idCuota);
+                        updateCommand.ExecuteNonQuery();
+                    }
                 }
                 else
                 {
@@ -144,5 +126,3 @@ namespace ProyectoIntegrador
         }
     }
 }
-    
-

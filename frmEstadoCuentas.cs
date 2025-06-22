@@ -16,9 +16,11 @@ namespace ProyectoIntegrador
     {
         private string rol;
         private string usuario;
-        public frmEstadoCuentas()
+        public frmEstadoCuentas(string usuario, string rol)
         {
             InitializeComponent();
+            this.usuario = usuario;
+            this.rol = rol;
             this.Load += frmEstadoCuentas_Load;
         }
 

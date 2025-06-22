@@ -33,7 +33,7 @@ namespace ProyectoIntegrador
         }
         private void btnClase_Click(object sender, EventArgs e)
         {
-            frmClase frmClase = new frmClase();
+            frmClase frmClase = new frmClase(usuario, rol);
             frmClase.Show();
             this.Hide();
         }
@@ -43,21 +43,23 @@ namespace ProyectoIntegrador
             frmPagar.Show();
             this.Hide();
         }
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
         private void btnEstadoCuenta_Click(object sender, EventArgs e)
         {
-            frmEstadoCuentas estadoCuentas = new frmEstadoCuentas();
+            frmEstadoCuentas estadoCuentas = new frmEstadoCuentas(usuario, rol);
             estadoCuentas.ShowDialog();
         }
 
         private void btnCarnet_Click(object sender, EventArgs e)
         {
-            frmBuscarSocio frmBuscarSocio = new frmBuscarSocio();
+            frmBuscarSocio frmBuscarSocio = new frmBuscarSocio(usuario, rol);
             frmBuscarSocio.Show();
             this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

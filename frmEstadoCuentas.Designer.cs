@@ -46,9 +46,10 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(285, 66);
+            label1.Location = new Point(356, 82);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(478, 31);
+            label1.Size = new Size(593, 38);
             label1.TabIndex = 0;
             label1.Text = "LISTADO DE SOCIOS CON CUOTA A VENCER";
             label1.Click += label1_Click;
@@ -57,10 +58,11 @@
             // 
             dtgvCuotaVencer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvCuotaVencer.Columns.AddRange(new DataGridViewColumn[] { codSocio, nombre, apellido, monto, telefono, email });
-            dtgvCuotaVencer.Location = new Point(59, 135);
+            dtgvCuotaVencer.Location = new Point(74, 169);
+            dtgvCuotaVencer.Margin = new Padding(4, 4, 4, 4);
             dtgvCuotaVencer.Name = "dtgvCuotaVencer";
             dtgvCuotaVencer.RowHeadersWidth = 51;
-            dtgvCuotaVencer.Size = new Size(919, 188);
+            dtgvCuotaVencer.Size = new Size(1149, 235);
             dtgvCuotaVencer.TabIndex = 1;
             dtgvCuotaVencer.CellContentClick += dtgvCuotaVencer_CellContentClick;
             // 
@@ -111,9 +113,10 @@
             btnVolver.BackColor = Color.SeaGreen;
             btnVolver.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVolver.ForeColor = SystemColors.Control;
-            btnVolver.Location = new Point(857, 351);
+            btnVolver.Location = new Point(1071, 439);
+            btnVolver.Margin = new Padding(4, 4, 4, 4);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(120, 30);
+            btnVolver.Size = new Size(150, 38);
             btnVolver.TabIndex = 2;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = false;
@@ -121,15 +124,17 @@
             // 
             // frmEstadoCuentas
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
-            ClientSize = new Size(1011, 450);
+            ClientSize = new Size(1264, 562);
             Controls.Add(btnVolver);
             Controls.Add(dtgvCuotaVencer);
             Controls.Add(label1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "frmEstadoCuentas";
-            Text = "frmEstadoCuentas";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Estado de Cuentas";
             Load += frmEstadoCuentas_Load_1;
             ((System.ComponentModel.ISupportInitialize)dtgvCuotaVencer).EndInit();
             ResumeLayout(false);

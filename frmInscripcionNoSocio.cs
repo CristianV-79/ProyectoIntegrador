@@ -43,7 +43,7 @@ namespace ProyectoIntegrador
                 string.IsNullOrEmpty(txtFeNac.Text) ||
                 string.IsNullOrEmpty(txtEmail.Text))
             {
-                MessageBox.Show("Debe completar todos los datos requeridos",
+                MessageBox.Show("Debe completar todos los campos",
                 "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }

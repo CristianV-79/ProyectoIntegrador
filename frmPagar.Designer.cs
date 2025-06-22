@@ -51,7 +51,6 @@
             lblNumInscripcion.Size = new Size(222, 23);
             lblNumInscripcion.TabIndex = 0;
             lblNumInscripcion.Text = "Ingrese Codigo de Cliente:";
-            lblNumInscripcion.Click += label1_Click;
             // 
             // btnPagar
             // 

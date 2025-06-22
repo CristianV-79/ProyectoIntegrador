@@ -42,10 +42,10 @@
             btnInscripciones.BackColor = Color.SeaGreen;
             btnInscripciones.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnInscripciones.ForeColor = SystemColors.Control;
-            btnInscripciones.Location = new Point(123, 126);
-            btnInscripciones.Margin = new Padding(3, 2, 3, 2);
+            btnInscripciones.Location = new Point(154, 158);
+            btnInscripciones.Margin = new Padding(4, 2, 4, 2);
             btnInscripciones.Name = "btnInscripciones";
-            btnInscripciones.Size = new Size(160, 90);
+            btnInscripciones.Size = new Size(200, 112);
             btnInscripciones.TabIndex = 0;
             btnInscripciones.Text = "INSCRIPCIONES";
             btnInscripciones.UseVisualStyleBackColor = false;
@@ -56,12 +56,12 @@
             btnClase.BackColor = Color.SeaGreen;
             btnClase.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnClase.ForeColor = SystemColors.Control;
-            btnClase.Location = new Point(123, 300);
-            btnClase.Margin = new Padding(3, 2, 3, 2);
+            btnClase.Location = new Point(154, 375);
+            btnClase.Margin = new Padding(4, 2, 4, 2);
             btnClase.Name = "btnClase";
-            btnClase.Size = new Size(160, 90);
+            btnClase.Size = new Size(200, 112);
             btnClase.TabIndex = 1;
-            btnClase.Text = "ACTIVIDAD";
+            btnClase.Text = "ACTIVIDADES";
             btnClase.UseVisualStyleBackColor = false;
             btnClase.Click += btnClase_Click;
             // 
@@ -70,10 +70,10 @@
             btnPagar.BackColor = Color.SeaGreen;
             btnPagar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnPagar.ForeColor = SystemColors.Control;
-            btnPagar.Location = new Point(534, 126);
-            btnPagar.Margin = new Padding(3, 2, 3, 2);
+            btnPagar.Location = new Point(668, 158);
+            btnPagar.Margin = new Padding(4, 2, 4, 2);
             btnPagar.Name = "btnPagar";
-            btnPagar.Size = new Size(160, 90);
+            btnPagar.Size = new Size(200, 112);
             btnPagar.TabIndex = 2;
             btnPagar.Text = "PAGAR";
             btnPagar.UseVisualStyleBackColor = false;
@@ -84,10 +84,10 @@
             btnEstadoCuenta.BackColor = Color.SeaGreen;
             btnEstadoCuenta.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnEstadoCuenta.ForeColor = SystemColors.Control;
-            btnEstadoCuenta.Location = new Point(330, 211);
-            btnEstadoCuenta.Margin = new Padding(3, 2, 3, 2);
+            btnEstadoCuenta.Location = new Point(412, 264);
+            btnEstadoCuenta.Margin = new Padding(4, 2, 4, 2);
             btnEstadoCuenta.Name = "btnEstadoCuenta";
-            btnEstadoCuenta.Size = new Size(160, 90);
+            btnEstadoCuenta.Size = new Size(200, 112);
             btnEstadoCuenta.TabIndex = 3;
             btnEstadoCuenta.Text = "ESTADO DE CUENTAS";
             btnEstadoCuenta.UseVisualStyleBackColor = false;
@@ -96,9 +96,10 @@
             // lblIngreso
             // 
             lblIngreso.AutoSize = true;
-            lblIngreso.Location = new Point(35, 32);
+            lblIngreso.Location = new Point(44, 40);
+            lblIngreso.Margin = new Padding(4, 0, 4, 0);
             lblIngreso.Name = "lblIngreso";
-            lblIngreso.Size = new Size(87, 20);
+            lblIngreso.Size = new Size(104, 25);
             lblIngreso.TabIndex = 4;
             lblIngreso.Text = "Usuario/Rol";
             // 
@@ -107,10 +108,10 @@
             btnSalir.BackColor = Color.SeaGreen;
             btnSalir.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = SystemColors.Control;
-            btnSalir.Location = new Point(640, 36);
-            btnSalir.Margin = new Padding(3, 2, 3, 2);
+            btnSalir.Location = new Point(800, 45);
+            btnSalir.Margin = new Padding(4, 2, 4, 2);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(94, 30);
+            btnSalir.Size = new Size(118, 38);
             btnSalir.TabIndex = 5;
             btnSalir.Text = "SALIR";
             btnSalir.UseVisualStyleBackColor = false;
@@ -121,10 +122,10 @@
             btnCarnet.BackColor = Color.SeaGreen;
             btnCarnet.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
             btnCarnet.ForeColor = SystemColors.Control;
-            btnCarnet.Location = new Point(534, 300);
-            btnCarnet.Margin = new Padding(3, 2, 3, 2);
+            btnCarnet.Location = new Point(668, 375);
+            btnCarnet.Margin = new Padding(4, 2, 4, 2);
             btnCarnet.Name = "btnCarnet";
-            btnCarnet.Size = new Size(160, 90);
+            btnCarnet.Size = new Size(200, 112);
             btnCarnet.TabIndex = 6;
             btnCarnet.Text = "EMITIR CARNET";
             btnCarnet.UseVisualStyleBackColor = false;
@@ -132,11 +133,11 @@
             // 
             // frmPrincipal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1000, 562);
             Controls.Add(btnCarnet);
             Controls.Add(btnSalir);
             Controls.Add(lblIngreso);
@@ -144,7 +145,7 @@
             Controls.Add(btnPagar);
             Controls.Add(btnClase);
             Controls.Add(btnInscripciones);
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 2, 4, 2);
             Name = "frmPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPrincipal";

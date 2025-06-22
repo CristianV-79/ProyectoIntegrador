@@ -25,9 +25,11 @@ namespace ProyectoIntegrador
         public string EmailSocio { get; set; }      // Email
         public string TelefonoSocio { get; set; }   // Telefono
         public string DireccionSocio { get; set; }  // Direccion
-        public frmCarnet()
+        public frmCarnet(string usuario, string rol)
         {
             InitializeComponent();
+            this.usuario = usuario;
+            this.rol = rol;
         }
 
         private void frmCarnet_Load(object sender, EventArgs e)
